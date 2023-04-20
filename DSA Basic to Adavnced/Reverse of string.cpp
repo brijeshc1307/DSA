@@ -1,6 +1,18 @@
-## Program Code
+// Write a function that reverses a string. The input string is given as an array of characters s.
 
-```c++
+// You must do this by modifying the input array in-place with O(1) extra memory.
+
+// Example 1:
+
+// Input: s = ["h","e","l","l","o"]
+// Output: ["o","l","l","e","h"]
+// Example 2:
+
+// Input: s = ["H","a","n","n","a","h"]
+//  Output: ["h","a","n","n","a","H"]
+
+// ## Program Code
+
 #include <iostream>
 using namespace std;
 
@@ -34,7 +46,7 @@ int main() {
     cout<<"Reverse of string is "<<name<<endl;
     return 0;
 }
-```
+/*```
 
 ## Sample Output
 
@@ -50,4 +62,4 @@ Reverse of string is nhoJ
 - The program assumes that the maximum length of the input string is 20 characters.
 - The `reversestring` function modifies the original string in place.
 - The `getlength` function counts the number of characters in the string until it encounters the null character `\0`, which marks the end of the string.
-- The program uses the `swap` function from the `<algorithm>` header to swap the characters in the string.
+- The program uses the `swap` function from the `<algorithm>` header to swap the characters in the string./*
