@@ -1,3 +1,5 @@
+
+
 # Data Structures and Algorithms: Basic to Advance
 
 This repository contains the implementation of various Data Structures and Algorithms from Basic to Advance level in different programming languages. The purpose of this repository is to provide a one-stop solution to learn and practice Data Structures and Algorithms.
@@ -49,3 +51,7 @@ Contributions are always welcome! If you want to contribute to this repository, 
 8. Create a pull request to merge your changes into the main repository
 
 Please ensure that your code follows the best practices and guidelines for the programming language you are using.
+
+## License
+
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
