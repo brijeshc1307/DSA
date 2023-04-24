@@ -32,11 +32,16 @@ public:
             while(j<n && chars[i]==chars[j]){
                 j++;
             }
-
+         //yaha kab aaoge
+         //ya to vector poora traverse krdia
+         //ya fer new/Different character encounter kia hai
+         
+         //oldChar store karlo
             chars[ansindex++]=chars[i];
             int count =j-i;
 
             if(count>1){
+             //converting counting into single digit and saving in answer
                 string cnt=to_string(count);
                 for(char ch: cnt){
                     chars[ansindex++]=ch;
