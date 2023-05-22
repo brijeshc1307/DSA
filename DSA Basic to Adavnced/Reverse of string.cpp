@@ -62,4 +62,28 @@ Reverse of string is nhoJ
 - The program assumes that the maximum length of the input string is 20 characters.
 - The `reversestring` function modifies the original string in place.
 - The `getlength` function counts the number of characters in the string until it encounters the null character `\0`, which marks the end of the string.
-- The program uses the `swap` function from the `<algorithm>` header to swap the characters in the string./*
+- The program uses the `swap` function from the `<algorithm>` header to swap the characters in the string.*/
+
+
+// Using Recursion
+#include <iostream>
+using namespace std;
+
+void revrse(string &str, int i,int j){
+    if(i>j)
+        return;
+    swap(str[i],str[j]);
+    i++;
+    j--;
+    revrse(str,i,j);
+}
+int main() {
+    string name="Brijesh";
+    cout<<name<<endl;
+    revrse(name,0,name.length()-1);
+    cout<<name<<endl;
+
+    return 0;
+}
+
+// TC =O(N)
