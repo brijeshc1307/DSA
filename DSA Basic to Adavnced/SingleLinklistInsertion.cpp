@@ -27,6 +27,10 @@ void InsertAtTail(Node* &tail, int d){
 }
 
 void InsertAtPosition(Node* &head, int position, int d){
+  if(position==1){
+    InsertAtHead(head,d);
+    return;
+  }
   Node* temp= head;
   int cnt=1;
   while(cnt<position-1){
