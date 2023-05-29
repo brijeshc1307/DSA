@@ -104,7 +104,9 @@ int main() {
   Wall wall1(10.5, 8.6);
 
   // copy contents of wall1 to wall2
-  Wall wall2 = wall1;
+  Wall wall2(wall1);
+    // OR
+  // Wall wall2 = wall1;
 
   // print areas of wall1 and wall2
   cout << "Area of Wall 1: " << wall1.calculateArea() << endl;
