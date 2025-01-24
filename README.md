@@ -459,6 +459,318 @@ Popped: 1 - First
 
 ---
 
+### **Using `vector` in Different STL Containers in C++**  
+
+The `std::vector` is a dynamic array in C++ that can be used within various STL containers like `array`, `vector`, `list`, `deque`, `forward_list`, `set`, `multiset`, `map`, `multimap`, `queue`, `priority_queue`, `stack`, `unordered_set`, `unordered_multiset`, `unordered_map`, and `unordered_multimap`. This allows flexible storage of elements in different data structures.
+
+---
+
+## **1. Using `vector` in `array`**  
+
+A `std::array` can store `vector` elements efficiently.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <array>
+#include <vector>
+using namespace std;
+
+int main() {
+    array<vector<int>, 3> arr = {{{{1, 2}}, {{3, 4, 5}}, {{6, 7, 8, 9}}}};
+
+    for (const auto &v : arr) {
+        for (int val : v) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+**Output:**  
+```
+1 2  
+3 4 5  
+6 7 8 9  
+```
+
+---
+
+## **2. Using `vector` in `vector`**  
+
+A `vector` of `vector` is useful for storing 2D data.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<vector<int>> vec = {{1, 2}, {3, 4, 5}, {6, 7, 8, 9}};
+
+    for (const auto &v : vec) {
+        for (int val : v) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+---
+
+## **3. Using `vector` in `list`**  
+
+A `list` of `vector` provides fast insertion/deletion with dynamic storage.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <list>
+#include <vector>
+using namespace std;
+
+int main() {
+    list<vector<int>> lst = {{1, 2, 3}, {4, 5}, {6, 7, 8}};
+
+    for (const auto &v : lst) {
+        for (int val : v) cout << val << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+---
+
+## **4. Using `vector` in `deque`**  
+
+A `deque` of `vector` allows dynamic access from both ends.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <deque>
+#include <vector>
+using namespace std;
+
+int main() {
+    deque<vector<int>> dq = {{1, 2}, {3, 4, 5}, {6, 7}};
+
+    for (const auto &v : dq) {
+        for (int val : v) cout << val << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+---
+
+## **5. Using `vector` in `forward_list`**  
+
+A `forward_list` with `vector` allows forward traversal.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <forward_list>
+#include <vector>
+using namespace std;
+
+int main() {
+    forward_list<vector<int>> fl = {{1, 2}, {3, 4}, {5, 6}};
+
+    for (const auto &v : fl) {
+        for (int val : v) cout << val << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+---
+
+## **6. Using `vector` in `set`**  
+
+Since `vector` lacks an ordering criterion, a custom comparator is needed.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <set>
+#include <vector>
+using namespace std;
+
+struct compareVector {
+    bool operator()(const vector<int> &a, const vector<int> &b) const {
+        return a.size() < b.size();
+    }
+};
+
+int main() {
+    set<vector<int>, compareVector> s = {{1, 2}, {3, 4, 5}, {6, 7, 8, 9}};
+
+    for (const auto &v : s) {
+        for (int val : v) cout << val << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+---
+
+## **7. Using `vector` in `map`**  
+
+A `map` with `vector` values allows fast lookups.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <map>
+#include <vector>
+using namespace std;
+
+int main() {
+    map<int, vector<int>> m;
+    m[1] = {10, 20, 30};
+    m[2] = {40, 50};
+
+    for (const auto &p : m) {
+        cout << p.first << " -> ";
+        for (int val : p.second) cout << val << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+---
+
+## **8. Using `vector` in `queue`**  
+
+A `queue` of `vector` allows sequential processing.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <queue>
+#include <vector>
+using namespace std;
+
+int main() {
+    queue<vector<int>> q;
+    q.push({1, 2, 3});
+    q.push({4, 5});
+
+    while (!q.empty()) {
+        for (int val : q.front()) cout << val << " ";
+        cout << endl;
+        q.pop();
+    }
+
+    return 0;
+}
+```
+
+---
+
+## **9. Using `vector` in `priority_queue`**  
+
+A `priority_queue` of `vector` needs a comparator.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <queue>
+#include <vector>
+using namespace std;
+
+struct compareSize {
+    bool operator()(const vector<int> &a, const vector<int> &b) {
+        return a.size() > b.size();
+    }
+};
+
+int main() {
+    priority_queue<vector<int>, vector<vector<int>>, compareSize> pq;
+    pq.push({1, 2});
+    pq.push({3, 4, 5});
+
+    while (!pq.empty()) {
+        for (int val : pq.top()) cout << val << " ";
+        cout << endl;
+        pq.pop();
+    }
+
+    return 0;
+}
+```
+
+---
+
+## **10. Using `vector` in `stack`**  
+
+A `stack` of `vector` allows LIFO storage.  
+### **Example:**  
+```cpp
+#include <iostream>
+#include <stack>
+#include <vector>
+using namespace std;
+
+int main() {
+    stack<vector<int>> s;
+    s.push({1, 2});
+    s.push({3, 4, 5});
+
+    while (!s.empty()) {
+        for (int val : s.top()) cout << val << " ";
+        cout << endl;
+        s.pop();
+    }
+
+    return 0;
+}
+```
+
+---
+
+## **11. Using `vector` in Unordered Containers**  
+
+- **Unordered set/multiset/map/multimap** require a custom hash function.  
+- Example hash function for `vector<int>`:  
+```cpp
+#include <iostream>
+#include <unordered_set>
+#include <vector>
+using namespace std;
+
+struct VectorHash {
+    size_t operator()(const vector<int> &v) const {
+        size_t hash = 0;
+        for (int i : v) {
+            hash ^= hash * 31 + i;
+        }
+        return hash;
+    }
+};
+
+int main() {
+    unordered_set<vector<int>, VectorHash> us = {{1, 2}, {3, 4}};
+    for (const auto &v : us) {
+        for (int val : v) cout << val << " ";
+        cout << endl;
+    }
+    return 0;
+}
+```
+
+---
+
 ## Contribution Guidelines
 
 Contributions are always welcome! If you want to contribute to this repository, please follow the below guidelines:
