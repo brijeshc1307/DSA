@@ -7,26 +7,16 @@
 STL consists of four main components:  
 
 1. **Containers:**  
-   - Used to store and manage collections of data.
-   - Examples: `vector`, `list`, `map`, `set`.
-
 2. **Algorithms:**  
-   - Provide commonly used operations such as sorting, searching, and manipulating data.
-   - Examples: `sort()`, `find()`, `binary_search()`, `reverse()`.
-
 3. **Iterators:**  
-   - Used to traverse elements in containers.
-   - Examples: `begin()`, `end()`, `rbegin()`, `rend()`.
-
-4. **Functors (Function Objects):**  
-   - Objects that behave like functions and can be passed as arguments to algorithms.
-   - Example: Overloaded `operator()`.
-
+4. **Functors (Function Objects):**
+   
 ---
 
-### **1. STL Containers**  
+### **1. STL Containers** 
+- Used to store and manage collections of data.
 
-STL containers are categorized into three types:
+STL containers are categorized into 4 types:
 
 #### **A. Sequence Containers**  
 Stores elements sequentially (like arrays).  
@@ -72,7 +62,190 @@ Stores elements with no specific order, offering faster access compared to order
 
 ---
 
-### **2. STL Algorithms**  
+### **1. Pair**
+The `pair` in C++ STL is a utility that allows storing two heterogeneous values (of possibly different types) in a single unit. It is commonly used to combine two values and pass them together, such as key-value pairs in maps.
+```txt 
+एक Class है , जो दो Value Store करती है ये Pair रिलेशन Maintain करने लिए के Use करते है
+```
+
+---
+
+### **Syntax of `pair`**  
+```cpp
+#include <iostream>
+#include <utility>
+using namespace std;
+
+// Declaration of a pair
+pair<T1, T2> variable_name;
+```
+
+- `T1` → Data type of the first element  
+- `T2` → Data type of the second element  
+
+---
+
+### **Example of `pair`**  
+
+```cpp
+#include <iostream>
+#include <utility>
+using namespace std;
+
+int main() {
+    pair<int, string> p1;  
+    p1.first = 10;  
+    p1.second = "Brijesh";
+
+    cout << "First: " << p1.first << ", Second: " << p1.second << endl;
+    return 0;
+}
+```
+
+**Output:**  
+```
+First: 10, Second: Brijesh
+```
+
+---
+
+### **Ways to Initialize a `pair`**  
+
+1. **Using the constructor:**  
+   ```cpp
+   pair<int, string> p1(1, "Apple");
+   ```
+
+2. **Using the `make_pair()` function:**  
+   ```cpp
+   pair<int, double> p2 = make_pair(2, 3.14);
+   ```
+
+3. **Using assignment:**  
+   ```cpp
+   pair<int, char> p3;
+   p3 = {3, 'A'};
+   ```
+
+---
+
+### **Accessing Elements of a `pair`**  
+You can access the elements of a `pair` using the `first` and `second` members.
+
+```cpp
+pair<string, double> product = {"Laptop", 75000.50};
+cout << "Product: " << product.first << ", Price: " << product.second << endl;
+```
+
+**Output:**  
+```
+Product: Laptop, Price: 75000.5
+```
+
+---
+
+### **Modifying Elements of a `pair`**  
+```cpp
+pair<int, string> person = {101, "Alice"};
+person.second = "Bob";  // Changing the second element
+
+cout << person.first << " " << person.second;
+```
+
+**Output:**  
+```
+101 Bob
+```
+
+---
+
+### **Comparing Pairs**  
+Pairs can be compared lexicographically (first elements first, then second elements if first are equal).
+
+```cpp
+pair<int, int> p1 = {2, 50};
+pair<int, int> p2 = {2, 30};
+
+if (p1 > p2)
+    cout << "p1 is greater";
+else
+    cout << "p2 is greater";
+```
+
+**Output:**  
+```
+p1 is greater
+```
+
+---
+
+### **Pair with STL Containers**  
+
+#### **1. Using `pair` in `vector`:**  
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<pair<int, string>> students = {{101, "Alice"}, {102, "Bob"}};
+
+    for (auto &s : students)
+        cout << s.first << " - " << s.second << endl;
+
+    return 0;
+}
+```
+
+**Output:**  
+```
+101 - Alice  
+102 - Bob
+```
+
+---
+
+#### **2. Using `pair` in `map`:**  
+```cpp
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    map<int, pair<string, int>> emp;
+    emp[1] = {"John", 50000};
+    emp[2] = {"Jane", 60000};
+
+    for (auto &e : emp)
+        cout << e.first << ": " << e.second.first << ", " << e.second.second << endl;
+
+    return 0;
+}
+```
+
+**Output:**  
+```
+1: John, 50000  
+2: Jane, 60000
+```
+
+---
+
+### **Advantages of `pair` in STL**  
+- Helps in storing related data together.  
+- Can be used as a key-value pair for efficient lookup operations.  
+- Supports easy comparison and sorting.
+
+---
+
+### **Limitations of `pair`**  
+- Only stores two values; for more, use `tuple` or structures.  
+- Readability can suffer when used extensively in complex programs.
+
+---
+
+### **2. STL Algorithms** 
+- Provide commonly used operations such as sorting, searching, and manipulating data.
 
 STL provides powerful algorithms for manipulating data in containers.
 
@@ -87,6 +260,7 @@ STL provides powerful algorithms for manipulating data in containers.
 ---
 
 ### **3. STL Iterators**  
+- Used to traverse elements in containers.
 
 Iterators are used to traverse through elements in containers.
 
@@ -100,6 +274,7 @@ Iterators are used to traverse through elements in containers.
 ---
 
 ### **4. STL Functors (Function Objects)**  
+- Objects that behave like functions and can be passed as arguments to algorithms.
 
 A **functor** is an object that behaves like a function by overloading the `()` operator.
 
