@@ -276,7 +276,7 @@ int main() {
 
 ---
 
-## **4. Using `pair` in `array`**  
+#### **4. Using `pair` in `array`**  
 In C++11 and later, `std::array` can store pairs.
 
 ### **Example:**
@@ -305,7 +305,7 @@ int main() {
 
 ---
 
-## **2. Using `pair` in `list`**  
+#### **5. Using `pair` in `list`**  
 A `list` of pairs is useful when frequent insertions or deletions are required.
 
 ### **Example:**
@@ -334,7 +334,7 @@ int main() {
 
 ---
 
-## **3. Using `pair` in `deque`**  
+#### **6. Using `pair` in `deque`**  
 A `deque` of pairs is useful for double-ended access operations.
 
 ### **Example:**
@@ -365,7 +365,7 @@ int main() {
 
 ---
 
-## **4. Using `pair` in `forward_list`**  
+#### **7. Using `pair` in `forward_list`**  
 A `forward_list` stores pairs with fast forward traversal.
 
 ### **Example:**
@@ -394,7 +394,7 @@ int main() {
 
 ---
 
-## **5. Using `pair` in `set`**  
+#### **8. Using `pair` in `set`**  
 A `set` of pairs stores unique elements in sorted order based on the first element of the pair.
 
 ### **Example:**
@@ -423,7 +423,7 @@ int main() {
 
 ---
 
-## **6. Using `pair` in `multiset`**  
+#### **9. Using `pair` in `multiset`**  
 A `multiset` allows duplicate pairs, sorted automatically.
 
 ### **Example:**
@@ -453,7 +453,7 @@ int main() {
 
 ---
 
-## **7. Using `pair` in `map`**  
+#### **10. Using `pair` in `map`**  
 A `map` stores unique key-value pairs sorted by key.
 
 ### **Example:**
@@ -483,7 +483,7 @@ int main() {
 
 ---
 
-## **8. Using `pair` in `multimap`**  
+#### **11. Using `pair` in `multimap`**  
 A `multimap` allows multiple pairs with the same key.
 
 ### **Example:**
@@ -515,7 +515,7 @@ int main() {
 
 ---
 
-## **1. Using `pair` in `queue`**  
+#### **12. Using `pair` in `queue`**  
 
 A `queue` follows the **FIFO (First In, First Out)** principle. Using `pair` in a queue allows us to store two related values such as task IDs with timestamps, or coordinates in a grid.  
 
@@ -552,7 +552,7 @@ Processing: 3 - Task3
 
 ---
 
-## **2. Using `pair` in `priority_queue`**  
+#### **13. Using `pair` in `priority_queue`**  
 
 A `priority_queue` follows the **max-heap (default) or min-heap (custom comparator)** principle. Using pairs allows us to prioritize tasks based on priority values.
 
@@ -618,7 +618,7 @@ Processing: 3 - Low Priority
 
 ---
 
-## **3. Using `pair` in `stack`**  
+#### **14. Using `pair` in `stack`**  
 
 A `stack` follows the **LIFO (Last In, First Out)** principle. Using `pair` in a stack helps in scenarios like tracking previous states (e.g., undo functionality, DFS in graphs).
 
