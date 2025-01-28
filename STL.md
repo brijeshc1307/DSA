@@ -194,7 +194,39 @@ p1 is greater
 
 ### **Pair with STL Containers**  
 
-#### **1. Using `pair` in `vector`:**  
+#### **1. Using `pair` in `pair`(Nested `pair`):**  
+```cpp
+#include <iostream>
+#include <utility> // For std::pair
+
+int main() {
+    // Define a nested pair: (x, (y, label))
+    pair<int, pair<int, string>> point;
+
+    // Assign values
+    point.first = 5; // x-coordinate
+    point.second.first = 10; // y-coordinate
+    point.second.second = "Point A"; // Label
+
+    // Access the nested pair
+    cout << "X-coordinate: " << point.first << endl;
+    cout << "Y-coordinate: " << point.second.first << endl;
+    cout << "Label: " << point.second.second << endl;
+
+    return 0;
+}
+```
+
+**Output:**  
+```
+X-coordinate: 5
+Y-coordinate: 10
+Label: Point A
+```
+
+---
+
+#### **2. Using `pair` in `vector`:**  
 ```cpp
 #include <iostream>
 #include <vector>
@@ -218,7 +250,7 @@ int main() {
 
 ---
 
-#### **2. Using `pair` in `map`:**  
+#### **3. Using `pair` in `map`:**  
 ```cpp
 #include <iostream>
 #include <map>
@@ -244,7 +276,7 @@ int main() {
 
 ---
 
-## **1. Using `pair` in `array`**  
+## **4. Using `pair` in `array`**  
 In C++11 and later, `std::array` can store pairs.
 
 ### **Example:**
