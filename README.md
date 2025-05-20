@@ -1,5 +1,3 @@
-
-
 # Data Structures and Algorithms: Basic to Advance & STL 
 
 This repository contains the implementation of various Data Structures and Algorithms from Basic to Advance level in different programming languages. The purpose of this repository is to provide a one-stop solution to learn and practice Data Structures and Algorithms.
@@ -41,7 +39,7 @@ Each Algorithm has its own directory and contains the implementation of the algo
 
 ## DSA Problem Index
 
-| # | Mark as Done | Question with Link                                                                                                           | Solution                                                                                         |  Difficulty | Video Solution                                    | Companies      | Pre-requisites       |
+| # | Mark as Done | Questions                                                                                                           | Solution                                                                                         |  Difficulty | Video Solution                                    | Companies      | Pre-requisites       |
 | - | -------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------------------------- | ----------------- | ----------------------- |
 | 1 | ✅              | [Two Sum](https://leetcode.com/problems/two-sum/)                                                                               | [Solution](https://leetcode.com/problems/two-sum/solutions/)                                        | Easy          | [Video](https://www.youtube.com/watch?v=KLlXCFG5TnA) | Amazon, Google    | Arrays, Hash Map        |
 | 2 | ⬜              | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/) | Medium        | [Video](https://www.youtube.com/watch?v=wiGpQwVHdE0) | Google, Facebook  | Sliding Window, HashSet |
