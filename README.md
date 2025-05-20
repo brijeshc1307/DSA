@@ -39,9 +39,9 @@ Each Algorithm has its own directory and contains the implementation of the algo
 
 ## DSA Problem Index
 
-| #  |  Mark as Done |  Question                                                                                               |  Difficulty |  Video Solution                                      |  Companies      |  Pre-requisites          |
+| #  |  Mark as Done |  Question & Solution                                                                                              |  Difficulty |  Video Solution                                      |  Companies      |  Pre-requisites          |
 | -- | -------------- | ------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ----------------- | -------------------------- |
-| 1  | ✅              | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)                               | Easy          | [YouTube](https://www.youtube.com/watch?v=FPCZsG_AkUg) | -                 | Two Pointers, Arrays       |
+| 1  | ✅              | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) & [Solution](/SquaresOfASortedArray.md)  | Easy          | [YouTube](https://www.youtube.com/watch?v=FPCZsG_AkUg) | -                 | Two Pointers, Arrays       |
 | 2  | ⬜              | [Rotate Array](https://leetcode.com/problems/rotate-array/)                                                         | Medium        | [YouTube](https://www.youtube.com/watch?v=BHr381Guz3Y) | Amazon, Microsoft | Arrays, Modulo Arithmetic  |
 | 3  | ⬜              | [Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii/)                                 | Medium        | [YouTube](https://www.youtube.com/watch?v=nyUJhLxbIDY) | -                 | Permutations, Greedy       |
 | 4  | ⬜              | [Majority Element](https://leetcode.com/problems/majority-element/)                                                 | Easy          | [YouTube](https://www.youtube.com/watch?v=7pnhv842keE) | Amazon, Google    | Hash Map, Voting Algorithm |
