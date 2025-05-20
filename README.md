@@ -41,14 +41,11 @@ Each Algorithm has its own directory and contains the implementation of the algo
 
 ## DSA Problem Index
 
-| #  | Topic        | Question                          | Solution                                                                  | Difficulty | Video Solution                                            | Companies              |
-|----|--------------|-----------------------------------|----------------------------------------------------------------------|------------|-----------------------------------------------------------|-------------------------|
-| 1  | Arrays       | Find the duplicate in an array    | [LeetCode](https://leetcode.com/problems/find-the-duplicate-number) | Medium     | [YouTube](https://youtu.be/32Ll35mhWg0)                  | Amazon, Google          |
-| 2  | Strings      | Longest Palindromic Substring     | [LeetCode](https://leetcode.com/problems/longest-palindromic-substring) | Medium     | [YouTube](https://youtu.be/Y92WWa5t4pw)                  | Microsoft, Adobe        |
-| 3  | Linked List  | Reverse a Linked List             | [LeetCode](https://leetcode.com/problems/reverse-linked-list)       | Easy       | [YouTube](https://youtu.be/G0_I-ZF0S38)                  | Google, Meta            |
-| 4  | Binary Tree  | Maximum Depth of Binary Tree      | [LeetCode](https://leetcode.com/problems/maximum-depth-of-binary-tree) | Easy       | [YouTube](https://youtu.be/hTM3phVI6YQ)                  | Amazon, Facebook        |
-| 5  | Graph        | Number of Islands                 | [LeetCode](https://leetcode.com/problems/number-of-islands)         | Medium     | [YouTube](https://youtu.be/pV2kpPD66nE)                  | Google, Atlassian       |
-
+| # | Mark as Done | Question with Link                                                                                                           | Solution                                                                                         |  Difficulty | Video Solution                                    | Companies      | Pre-requisites       |
+| - | -------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------------------------- | ----------------- | ----------------------- |
+| 1 | ✅              | [Two Sum](https://leetcode.com/problems/two-sum/)                                                                               | [Solution](https://leetcode.com/problems/two-sum/solutions/)                                        | Easy          | [Video](https://www.youtube.com/watch?v=KLlXCFG5TnA) | Amazon, Google    | Arrays, Hash Map        |
+| 2 | ⬜              | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/) | Medium        | [Video](https://www.youtube.com/watch?v=wiGpQwVHdE0) | Google, Facebook  | Sliding Window, HashSet |
+| 3 | ⬜              | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)                                                     | [Solution](https://leetcode.com/problems/merge-k-sorted-lists/solutions/)                           | Hard          | [Video](https://www.youtube.com/watch?v=ptYUCjfNhJY) | Amazon, Microsoft | Heap, Linked List       |
 
 ---
 
