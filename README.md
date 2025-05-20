@@ -39,20 +39,6 @@ Each Algorithm has its own directory and contains the implementation of the algo
 
 ## DSA Problem Index
 
-Certainly! Here's a structured DSA (Data Structures and Algorithms) sheet based on the questions you've provided. The sheet includes the following columns:
-
-* **#**: Serial number
-* **✅ Mark as Done**: Checkbox to track completion
-* **🔗 Question with Link**: Title of the problem with a hyperlink to the LeetCode page
-* **⚙️ Difficulty**: Difficulty level (Easy, Medium, Hard)
-* **🎥 Video Solution**: Link to a video explanation
-* **🏢 Companies**: Companies where this question has been asked (if known)
-* **📘 Pre-requisites**: Topics or concepts to understand before attempting the problem
-
----
-
-### 📋 DSA Sheet
-
 | #  |  Mark as Done |  Question                                                                                               |  Difficulty |  Video Solution                                      |  Companies      |  Pre-requisites          |
 | -- | -------------- | ------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ----------------- | -------------------------- |
 | 1  | ✅              | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)                               | Easy          | [YouTube](https://www.youtube.com/watch?v=FPCZsG_AkUg) | -                 | Two Pointers, Arrays       |
