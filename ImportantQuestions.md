@@ -146,7 +146,7 @@ Given an array where every element appears twice except one element which appear
 
 ```
 6  
-2 2 1 -4 1 1
+2 2 1 -4 1 
 ```
 
 **Output:**
