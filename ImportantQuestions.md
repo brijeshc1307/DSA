@@ -290,4 +290,184 @@ int main() {
 
 ---
 
+### **3. Problem Name:** Find Duplicate Elements in an Array
+
+---
+
+### **Problem Statement:**
+
+You are given an array of integers. Some elements may appear more than once. Your task is to find and print **all duplicate elements** present in the array. Each duplicate should be printed only once, regardless of how many times it appears.
+
+---
+
+### **Input Format:**
+
+* The first line contains an integer `n` — the number of elements in the array.
+* The second line contains `n` space-separated integers — the elements of the array.
+
+---
+
+### **Output Format:**
+
+* Print all duplicate elements in any order, separated by spaces.
+* If there are no duplicates, print nothing.
+
+---
+
+### **Example:**
+
+**Input:**
+
+```
+6  
+2 3 1 -4 1 4
+```
+
+**Output:**
+
+```
+1
+```
+
+---
+
+## **Solution 1: Using Hash Map (unordered\_map)**
+
+### **Approach:**
+
+* Use an unordered map to count the frequency of each element.
+* Traverse the map and print keys with frequency > 1.
+
+```cpp
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+using namespace std;
+
+void findDuplicates(const vector<int>& arr) {
+    unordered_map<int, int> freq;
+    for (int num : arr) {
+        freq[num]++;
+    }
+
+    for (auto& pair : freq) {
+        if (pair.second > 1) {
+            cout << pair.first << " ";
+        }
+    }
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    findDuplicates(arr);
+    return 0;
+}
+```
+
+### **Time Complexity:** O(n)
+
+### **Space Complexity:** O(n)
+
+---
+
+## **Solution 2: Using Sorting**
+
+### **Approach:**
+
+* Sort the array.
+* Compare each element with the previous one.
+* If they are equal and not already in the result, print them.
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+void findDuplicates(vector<int>& arr) {
+    sort(arr.begin(), arr.end());
+    bool found = false;
+
+    for (int i = 1; i < arr.size(); i++) {
+        if (arr[i] == arr[i - 1] && (i == 1 || arr[i] != arr[i - 2])) {
+            cout << arr[i] << " ";
+            found = true;
+        }
+    }
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    findDuplicates(arr);
+    return 0;
+}
+```
+
+### **Time Complexity:** O(n log n)
+
+### **Space Complexity:** O(1) (if in-place sort is used)
+
+---
+
+## **Solution 3: Using Set for Tracking Seen Elements**
+
+### **Approach:**
+
+* Use one set to track seen elements.
+* Use another set to store duplicates.
+* Print all elements in the duplicates set.
+
+```cpp
+#include <iostream>
+#include <set>
+#include <vector>
+using namespace std;
+
+void findDuplicates(const vector<int>& arr) {
+    set<int> seen;
+    set<int> duplicates;
+
+    for (int num : arr) {
+        if (seen.count(num)) {
+            duplicates.insert(num);
+        } else {
+            seen.insert(num);
+        }
+    }
+
+    for (int dup : duplicates) {
+        cout << dup << " ";
+    }
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    findDuplicates(arr);
+    return 0;
+}
+```
+
+### **Time Complexity:** O(n log n)
+
+### **Space Complexity:** O(n)
+
+---
 
