@@ -127,7 +127,7 @@ int main(){
 
 ### **Problem Statement:**
 
-You are given an array of integers where all elements appear more than once **except one element that appears exactly once**. Your task is to find and print that unique element.
+Given an array where every element appears twice except one element which appears only once, find that unique element.
 
 ### **Input Format:**
 
