@@ -471,3 +471,243 @@ int main() {
 
 ---
 
+### **4. Problem Name:** Generate Fibonacci Series up to Nth Term (0-based Index)
+
+---
+
+### **Problem Statement:**
+
+You are given an integer `n`. Your task is to generate and return the **Fibonacci series** from the 0th term up to the `n`th term (inclusive). Since the numbers in the Fibonacci sequence can become very large, return each term **modulo** `10^9 + 7`.
+
+---
+
+### **Fibonacci Series Definition:**
+
+* `F(0) = 0`
+* `F(1) = 1`
+* `F(n) = F(n - 1) + F(n - 2)` for `n >= 2`
+
+---
+
+### **Input Format:**
+
+* A single integer `n` (0 ≤ n ≤ 10^5)
+
+---
+
+### **Output Format:**
+
+* Print `n+1` space-separated integers — the Fibonacci series from term `F(0)` to `F(n)`, each modulo `10^9 + 7`.
+
+---
+
+### **Example 1:**
+
+**Input:**
+
+```
+5
+```
+
+**Output:**
+
+```
+0 1 1 2 3 5
+```
+
+**Explanation:**
+Fibonacci series up to 5th term: `0 1 1 2 3 5`
+
+---
+
+### **Example 2:**
+
+**Input:**
+
+```
+10
+```
+
+**Output:**
+
+```
+0 1 1 2 3 5 8 13 21 34 55
+```
+
+**Explanation:**
+Fibonacci series up to 10th term: `0 1 1 2 3 5 8 13 21 34 55`
+
+---
+
+## **Approach 1: Iterative Dynamic Programming (Tabulation)**
+
+### **Algorithm:**
+
+1. Initialize `fib[0] = 0`, `fib[1] = 1`.
+2. Use a loop from `2` to `n` to compute each term using:
+
+   ```
+   fib[i] = (fib[i-1] + fib[i-2]) % MOD
+   ```
+3. Print all values from `fib[0]` to `fib[n]`.
+
+### **C++ Code:**
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+const int MOD = 1e9 + 7;
+
+void fibonacciSeries(int n) {
+    vector<int> fib(n + 1);
+    fib[0] = 0;
+    if (n >= 1) fib[1] = 1;
+
+    for (int i = 2; i <= n; i++) {
+        fib[i] = (fib[i - 1] + fib[i - 2]) % MOD;
+    }
+
+    for (int i = 0; i <= n; i++) {
+        cout << fib[i] << " ";
+    }
+}
+
+int main() {
+    int n;
+    cin >> n;
+    fibonacciSeries(n);
+    return 0;
+}
+```
+
+### Time Complexity: `O(n)`
+
+### Space Complexity: `O(n)`
+
+---
+
+## **Approach 2: Space-Optimized Iterative**
+
+### **Algorithm:**
+
+* Instead of storing all terms, keep only the last two values.
+* Print each term as it's computed.
+
+### **C++ Code:**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+const int MOD = 1e9 + 7;
+
+void fibonacciSeries(int n) {
+    long long a = 0, b = 1;
+
+    for (int i = 0; i <= n; i++) {
+        cout << a << " ";
+        long long c = (a + b) % MOD;
+        a = b;
+        b = c;
+    }
+}
+
+int main() {
+    int n;
+    cin >> n;
+    fibonacciSeries(n);
+    return 0;
+}
+```
+
+### Time Complexity: `O(n)`
+
+### Space Complexity: `O(1)`
+
+---
+
+## **Approach 3: Recursive (Inefficient for Large N)**
+
+### 🔍 **Algorithm:**
+
+* Define a recursive function:
+
+  ```cpp
+  F(n) = F(n-1) + F(n-2)
+  ```
+* Print `F(0)` to `F(n)`
+
+### Not suitable for large `n` due to exponential time.
+
+### **Code (For Understanding Only):**
+
+```cpp
+#include <iostream>
+using namespace std;
+
+const int MOD = 1e9 + 7;
+
+int fibonacci(int n) {
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return (fibonacci(n - 1) + fibonacci(n - 2)) % MOD;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    for (int i = 0; i <= n; i++) {
+        cout << fibonacci(i) << " ";
+    }
+    return 0;
+}
+```
+
+### Time Complexity: `O(2^n)`
+
+### Space Complexity: `O(n)` (function call stack)
+
+---
+
+## **Approach 4: Recursive with Memoization**
+
+### **Algorithm:**
+
+* Use recursion + cache results using a `dp[]` array.
+
+### **C++ Code:**
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+const int MOD = 1e9 + 7;
+
+int fibonacci(int n, vector<int>& dp) {
+    if (dp[n] != -1) return dp[n];
+    if (n == 0) return dp[0] = 0;
+    if (n == 1) return dp[1] = 1;
+
+    return dp[n] = (fibonacci(n - 1, dp) + fibonacci(n - 2, dp)) % MOD;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> dp(n + 1, -1);
+    for (int i = 0; i <= n; i++) {
+        cout << fibonacci(i, dp) << " ";
+    }
+    return 0;
+}
+```
+
+### Time Complexity: `O(n)`
+
+### Space Complexity: `O(n)` + stack
+
+---
+
