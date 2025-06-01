@@ -84,7 +84,7 @@ A structured roadmap for mastering **Data Structures and Algorithms** using C++.
 | 22         | [Bit Manipulation](bit-manipulation.md)                                                 | Bitwise operations, XOR tricks, and set bits counting.                        |
 | 23         | [Disjoint Set Union (DSU)](dsu.md)                                                      | Union-find, path compression, and Kruskal's helper.                           |
 | 24         | [Segment Trees & Fenwick Tree](segment-tree.md)                                         | Range queries and updates.                                                    |
-| 25         | [Top Interview Problems](https://github.com/brijeshc1307/DSA)                           | Most frequently asked coding problems with solutions.                         |
+| 25         | [Top Interview Problems](https://docs.google.com/spreadsheets/d/1z9bV0WCUppYZK5DW3uECi7YTDiAxEVq6/edit?usp=sharing&ouid=105991459636824159614&rtpof=true&sd=true)                           | Most frequently asked coding problems with solutions.                         |
 
 
 ---
