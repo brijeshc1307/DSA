@@ -64,9 +64,8 @@ Stores elements with no specific order, offering faster access compared to order
 
 ### **1. Pair**
 The `pair` in C++ STL is a utility that allows storing two heterogeneous values (of possibly different types) in a single unit. It is commonly used to combine two values and pass them together, such as key-value pairs in maps.
-```txt 
-एक Class है , जो दो Value Store करती है ये Pair रिलेशन Maintain करने लिए के Use करते है
-```
+ 
+>Pair एक Class है , जो दो Value Store करती है ये Pair रिलेशन Maintain करने लिए के Use करते है
 
 ---
 
