@@ -258,6 +258,86 @@ For `n = 10⁵`, that becomes **10⁵ × 10⁵ = 10⁹ comparisons → TLE**.
 
 ---
 
+Here's a comprehensive table showing the **time complexity** of various **algorithms**, including **searching**, **sorting**, and other fundamental operations like **graph** and **dynamic programming** algorithms.
+
+---
+
+### Searching Algorithms
+
+| Algorithm               | Best Case | Average Case | Worst Case |
+| ----------------------- | --------- | ------------ | ---------- |
+| Linear Search           | O(1)      | O(n)         | O(n)       |
+| Binary Search (sorted)  | O(1)      | O(log n)     | O(log n)   |
+| Ternary Search (sorted) | O(1)      | O(log₃ n)    | O(log₃ n)  |
+| Interpolation Search    | O(1)      | O(log log n) | O(n)       |
+| Exponential Search      | O(log i)  | O(log i)     | O(log i)   |
+| Jump Search             | O(√n)     | O(√n)        | O(√n)      |
+
+---
+
+### Sorting Algorithms
+
+| Algorithm                 | Best Case  | Average Case | Worst Case |
+| ------------------------- | ---------- | ------------ | ---------- |
+| Bubble Sort               | O(n)       | O(n²)        | O(n²)      |
+| Insertion Sort            | O(n)       | O(n²)        | O(n²)      |
+| Selection Sort            | O(n²)      | O(n²)        | O(n²)      |
+| Merge Sort                | O(n log n) | O(n log n)   | O(n log n) |
+| Quick Sort                | O(n log n) | O(n log n)   | O(n²)      |
+| Heap Sort                 | O(n log n) | O(n log n)   | O(n log n) |
+| Counting Sort             | O(n + k)   | O(n + k)     | O(n + k)   |
+| Radix Sort                | O(nk)      | O(nk)        | O(nk)      |
+| Bucket Sort               | O(n + k)   | O(n + k)     | O(n²)      |
+| Tim Sort (used in Python) | O(n)       | O(n log n)   | O(n log n) |
+
+---
+
+### Recursion & Dynamic Programming
+
+| Algorithm/Problem           | Time Complexity |
+| --------------------------- | --------------- |
+| Fibonacci (recursive)       | O(2ⁿ)           |
+| Fibonacci (DP)              | O(n)            |
+| Factorial (recursive)       | O(n)            |
+| Matrix Chain Multiplication | O(n³)           |
+| Longest Common Subsequence  | O(m × n)        |
+| Longest Increasing Subseq.  | O(n log n)      |
+| 0/1 Knapsack (DP)           | O(n × W)        |
+| Coin Change (DP)            | O(n × amount)   |
+
+---
+
+### Graph Algorithms
+
+| Algorithm              | Time Complexity             |
+| ---------------------- | --------------------------- |
+| BFS / DFS              | O(V + E)                    |
+| Dijkstra’s (min-heap)  | O((V + E) log V)            |
+| Bellman-Ford           | O(V × E)                    |
+| Floyd-Warshall         | O(V³)                       |
+| Prim’s (min-heap)      | O(E log V)                  |
+| Kruskal’s (DSU)        | O(E log E)                  |
+| Topological Sort (DFS) | O(V + E)                    |
+| Tarjan’s SCC           | O(V + E)                    |
+| Kosaraju’s SCC         | O(V + E)                    |
+| A\* Search             | O(E) (depends on heuristic) |
+
+---
+
+### Data Structure Operations
+
+| Operation                  | Time Complexity               |
+| -------------------------- | ----------------------------- |
+| Stack/Queue (push/pop)     | O(1)                          |
+| Hash Table (insert/search) | O(1) avg / O(n) worst         |
+| Binary Search Tree (BST)   | O(log n) avg / O(n) worst     |
+| AVL Tree (balanced BST)    | O(log n)                      |
+| Heap (insert/delete)       | O(log n)                      |
+| Trie (insert/search)       | O(L), L = word length         |
+| Union-Find (DSU)           | O(α(n)) with path compression |
+
+---
+
 ## **License**
 This project is licensed under the MIT License.
 
