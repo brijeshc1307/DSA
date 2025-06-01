@@ -60,7 +60,7 @@ A structured roadmap for mastering **Data Structures and Algorithms** using C++.
 
 | **S. No.** | **Topic**                                                                               | **Description**                                                               |
 | ---------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| 1          | [C++ Basics](/basics.md)                                                                | Syntax, I/O, data types, functions, and basic C++ concepts.                   |
+| 1          | [C++ Basics](https://github.com/brijeshc1307/CPP/blob/main/basics.md)                   | Syntax, I/O, data types, functions, and basic C++ concepts.                   |
 | 2          | [Time & Space Complexity](/timeAndSpaceComplexity.md)                                   | Big-O notation, best/average/worst cases, and common complexities.            |
 | 3          | [STL (Standard Template Library)](/STL.md)                                              | Vectors, sets, maps, stacks, queues, priority queues, and useful algorithms.  |
 | 4          | [Arrays](arrays.md)                                                                     | Static arrays, prefix sums, sliding window, and common problems.              |
