@@ -71,7 +71,7 @@ A structured roadmap for mastering **Data Structures and Algorithms** using C++.
 | 9          | [Recursion & Backtracking](recursion.md)                                                | Base cases, recursion trees, and backtracking templates.                      |
 | 10         | [Searching Algorithms](searching.md)                                                    | Linear search, binary search, and advanced variants (e.g., binary on answer). |
 | 11         | [Sorting Algorithms](/sort.md)                                                        | Bubble, selection, merge, quick, and inbuilt sort.                            |
-| 12         | [Two Pointers](two-pointers.md)                                                         | Common patterns and problems (e.g., pair sum, container with most water).     |
+| 12         | [Two Pointers](/TwoPointers.md)                                                       | Common patterns and problems (e.g., pair sum, container with most water).     |
 | 13         | [Greedy Algorithms](greedy.md)                                                          | Activity selection, job scheduling, and interval problems.                    |
 | 14         | [Sliding Window Technique](sliding-window.md)                                           | Fixed and variable window size problems.                                      |
 | 15         | [Binary Search Trees (BST)](bst.md)                                                     | Insertion, deletion, traversal, and properties.                               |
