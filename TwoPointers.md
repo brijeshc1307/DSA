@@ -81,7 +81,7 @@ int removeDuplicates(vector<int>& nums) {
 }
 ```
 
-🕒 O(n), space O(1)
+O(n), space O(1)
 
 ---
 
