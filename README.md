@@ -73,7 +73,7 @@ A structured roadmap for mastering **Data Structures and Algorithms** using C++.
 | 11         | [Sorting Algorithms](/sort.md)                                                        | Bubble, selection, merge, quick, and inbuilt sort.                            |
 | 12         | [Two Pointers](/TwoPointers.md)                                                       | Common patterns and problems (e.g., pair sum, container with most water).     |
 | 13         | [Greedy Algorithms](greedy.md)                                                          | Activity selection, job scheduling, and interval problems.                    |
-| 14         | [Sliding Window Technique](sliding-window.md)                                           | Fixed and variable window size problems.                                      |
+| 14         | [Sliding Window Technique](/SlidingWindowTechnique.md)                                 | Fixed and variable window size problems.                                      |
 | 15         | [Binary Search Trees (BST)](bst.md)                                                     | Insertion, deletion, traversal, and properties.                               |
 | 16         | [Heaps & Priority Queue](heaps.md)                                                      | Min/max heaps, heap sort, and Dijkstra’s heap usage.                          |
 | 17         | [Tries (Prefix Trees)](tries.md)                                                        | Efficient string storage and retrieval.                                       |
