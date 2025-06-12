@@ -67,7 +67,7 @@ A structured roadmap for mastering **Data Structures and Algorithms** using C++.
 | 5          | [Strings](https://github.com/brijeshc1307/CPP/blob/main/string.md)                      | String manipulation, pattern matching, and hashing.                           |
 | 6          | [Linked List](linked-list.md)                                                           | Singly, doubly, and circular linked lists; operations and problems.           |
 | 7          | [Stacks and Queues](stacks-queues.md)                                                   | Implementation, applications, monotonic stacks/queues.                        |
-| 8          | [Hashing](hashing.md)                                                                   | Hash maps, sets, frequency counting, and collision handling.                  |
+| 8          | [Hashing](/Hasing.md)                                                                   | Hash maps, sets, frequency counting, and collision handling.                  |
 | 9          | [Recursion & Backtracking](recursion.md)                                                | Base cases, recursion trees, and backtracking templates.                      |
 | 10         | [Searching Algorithms](/SearchingAlgorithms.md)                                        | Linear search, binary search, and advanced variants (e.g., binary on answer). |
 | 11         | [Sorting Algorithms](/sort.md)                                                        | Bubble, selection, merge, quick, and inbuilt sort.                            |
