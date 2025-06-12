@@ -63,8 +63,8 @@ A structured roadmap for mastering **Data Structures and Algorithms** using C++.
 | 1          | [C++ Basics](https://github.com/brijeshc1307/CPP/blob/main/basics.md)                   | Syntax, I/O, data types, functions, and basic C++ concepts.                   |
 | 2          | [Time & Space Complexity](/timeAndSpaceComplexity.md)                                   | Big-O notation, best/average/worst cases, and common complexities.            |
 | 3          | [STL (Standard Template Library)](/STL.md)                                              | Vectors, sets, maps, stacks, queues, priority queues, and useful algorithms.  |
-| 4          | [Arrays](arrays.md)                                                                     | Static arrays, prefix sums, sliding window, and common problems.              |
-| 5          | [Strings](strings.md)                                                                   | String manipulation, pattern matching, and hashing.                           |
+| 4          | [Arrays](https://github.com/brijeshc1307/CPP/edit/main/array.md)                        | Static arrays, prefix sums, sliding window, and common problems.              |
+| 5          | [Strings](https://github.com/brijeshc1307/CPP/edit/main/string.md)                      | String manipulation, pattern matching, and hashing.                           |
 | 6          | [Linked List](linked-list.md)                                                           | Singly, doubly, and circular linked lists; operations and problems.           |
 | 7          | [Stacks and Queues](stacks-queues.md)                                                   | Implementation, applications, monotonic stacks/queues.                        |
 | 8          | [Hashing](hashing.md)                                                                   | Hash maps, sets, frequency counting, and collision handling.                  |
