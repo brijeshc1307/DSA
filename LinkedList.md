@@ -674,8 +674,23 @@ present at 22
 
 ---
 
-##  Doubly Linked List (Structure Only)
+##  Doubly Linked List 
+Using class
+```cpp
+class Node {
+public:
+    int data;
+    Node* prev;
+    Node* next;
 
+    Node(int val) {
+        data = val;
+        prev = nullptr;
+        next = nullptr;
+    }
+};
+```
+Using structure
 ```cpp
 struct DNode {
     int data;
@@ -690,7 +705,7 @@ struct DNode {
 ```
 ---
 
-## Full C++ Code for Doubly Linked List
+## Code for Doubly Linked List
 
 ```cpp
 #include <iostream>
