@@ -1,4 +1,4 @@
-## **Two Pointers** Technique?
+## **Two Pointers** Technique
 
 The **Two Pointers** method uses **two indices** (often `left` and `right`) that move toward each other or in the same direction to:
 
