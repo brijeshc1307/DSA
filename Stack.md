@@ -171,4 +171,172 @@ int main() {
 
 ---
 
-Would you like to see **stack-based applications** like **Balanced Parentheses** or **Expression Evaluation**?
+---
+
+## Queue
+
+A **Queue** is a **linear data structure** that follows the **FIFO** (First In, First Out) principle.
+The element inserted **first** is removed **first**.
+
+### 🔑 Core Operations:
+
+* `enqueue()` → Add element at the rear (tail)
+* `dequeue()` → Remove element from the front (head)
+* `front()` → Access front element
+* `isEmpty()` → Check if empty
+* `size()` → Total elements
+
+---
+
+## 🔹 Real-Life Example
+
+> **Queue at Ticket Counter 🎫**
+>
+> * First person to enter the line gets the ticket first
+> * New people join at the end (rear)
+> * Only front person is served (FIFO)
+
+---
+
+## 🔹 Types of Queue
+
+| Type               | Description                                                      |
+| ------------------ | ---------------------------------------------------------------- |
+| **Simple Queue**   | Standard FIFO behavior                                           |
+| **Circular Queue** | Last position connects back to first to form a circle            |
+| **Deque**          | Double Ended Queue; insertion and deletion possible at both ends |
+| **Priority Queue** | Elements served based on priority, not arrival order             |
+
+---
+
+## 🔹 Simple Queue Using Array (C++)
+
+```cpp
+#include <iostream>
+#define SIZE 100
+using namespace std;
+
+class Queue {
+    int arr[SIZE];
+    int front, rear;
+
+public:
+    Queue() {
+        front = 0;
+        rear = -1;
+    }
+
+    void enqueue(int val) {
+        if (rear == SIZE - 1) {
+            cout << "Queue Overflow\n";
+            return;
+        }
+        arr[++rear] = val;
+    }
+
+    void dequeue() {
+        if (front > rear) {
+            cout << "Queue Underflow\n";
+            return;
+        }
+        front++;
+    }
+
+    int getFront() {
+        if (front > rear) return -1;
+        return arr[front];
+    }
+
+    bool isEmpty() {
+        return front > rear;
+    }
+};
+
+int main() {
+    Queue q;
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+
+    cout << "Front: " << q.getFront() << endl; // 10
+    q.dequeue();
+    cout << "New Front: " << q.getFront() << endl; // 20
+    return 0;
+}
+```
+
+---
+
+## 🔹 Circular Queue (Brief Idea)
+
+Avoid wasting space in array by wrapping rear to front when space is available.
+
+```cpp
+rear = (rear + 1) % size;
+front = (front + 1) % size;
+```
+
+---
+
+## 🔹 Queue using STL
+
+```cpp
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main() {
+    queue<int> q;
+
+    q.push(1);
+    q.push(2);
+    q.push(3);
+
+    cout << "Front: " << q.front() << endl; // 1
+    q.pop();
+    cout << "Now Front: " << q.front() << endl; // 2
+}
+```
+
+---
+
+## 🔹 Priority Queue using STL
+
+```cpp
+#include <queue>
+#include <iostream>
+using namespace std;
+
+int main() {
+    priority_queue<int> pq; // max-heap by default
+    pq.push(50);
+    pq.push(30);
+    pq.push(40);
+
+    cout << "Top Priority: " << pq.top() << endl; // 50
+}
+```
+
+To create **min-heap**, use:
+
+```cpp
+priority_queue<int, vector<int>, greater<int>> pq;
+```
+
+---
+
+## 🔹 Summary
+
+| Feature     | Queue                                  |
+| ----------- | -------------------------------------- |
+| Access      | FIFO                                   |
+| Insert      | Rear                                   |
+| Remove      | Front                                  |
+| Real Use    | Print Queue, Call Queue, OS Scheduling |
+| C++ Support | Array, Linked List, STL                |
+
+---
+
+
+
+
