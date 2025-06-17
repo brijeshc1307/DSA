@@ -65,14 +65,14 @@ A structured roadmap for mastering **Data Structures and Algorithms** using C++.
 | 3          | [STL (Standard Template Library)](/STL.md)                                              | Vectors, sets, maps, stacks, queues, priority queues, and useful algorithms.  |
 | 4          | [Arrays](https://github.com/brijeshc1307/CPP/blob/main/array.md)                        | Static arrays, prefix sums, sliding window, and common problems.              |
 | 5          | [Strings](https://github.com/brijeshc1307/CPP/blob/main/string.md)                      | String manipulation, pattern matching, and hashing.                           |
-| 6          | [Linked List](linked-list.md)                                                           | Singly, doubly, and circular linked lists; operations and problems.           |
-| 7          | [Stacks and Queues](stacks-queues.md)                                                   | Implementation, applications, monotonic stacks/queues.                        |
+| 6          | [Linked List](/LinkedList.md)                                                           | Singly, doubly, and circular linked lists; operations and problems.           |
+| 7          | [Stacks and Queues](/Stack.md)                                                   | Implementation, applications, monotonic stacks/queues.                        |
 | 8          | [Hashing](/Hasing.md)                                                                   | Hash maps, sets, frequency counting, and collision handling.                  |
-| 9          | [Recursion & Backtracking](recursion.md)                                                | Base cases, recursion trees, and backtracking templates.                      |
+| 9          | [Recursion & Backtracking](/Recursion.md)                                                | Base cases, recursion trees, and backtracking templates.                      |
 | 10         | [Searching Algorithms](/SearchingAlgorithms.md)                                        | Linear search, binary search, and advanced variants (e.g., binary on answer). |
 | 11         | [Sorting Algorithms](/sort.md)                                                        | Bubble, selection, merge, quick, and inbuilt sort.                            |
 | 12         | [Two Pointers](/TwoPointers.md)                                                       | Common patterns and problems (e.g., pair sum, container with most water).     |
-| 13         | [Greedy Algorithms](greedy.md)                                                          | Activity selection, job scheduling, and interval problems.                    |
+| 13         | [Greedy Algorithms](/GreedyAlgorithm.md)                                               | Activity selection, job scheduling, and interval problems.                    |
 | 14         | [Sliding Window Technique](/SlidingWindowTechnique.md)                                 | Fixed and variable window size problems.                                      |
 | 15         | [Binary Search Trees (BST)](bst.md)                                                     | Insertion, deletion, traversal, and properties.                               |
 | 16         | [Heaps & Priority Queue](heaps.md)                                                      | Min/max heaps, heap sort, and Dijkstra’s heap usage.                          |
