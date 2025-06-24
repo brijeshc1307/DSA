@@ -230,6 +230,50 @@ Algorithms are step-by-step procedures or formulas for solving problems.
 
 ---
 
+### **Data Structures Time Complexity Table**
+
+| Data Structure             | Access   | Insert   | Delete   | Search   |
+| -------------------------- | -------- | -------- | -------- | -------- |
+| Array                      | O(1)     | O(1)     | O(n)     | O(n)     |
+| Singly Linked List         | O(1)     | O(1)     | O(n)     | O(n)     |
+| Doubly Linked List         | O(1)     | O(1)     | O(n)     | O(n)     |
+| Stack (Array/Linked List)  | O(1)     | O(1)     | O(n)     | O(n)     |
+| Queue (Array/Linked List)  | O(1)     | O(1)     | O(n)     | O(n)     |
+| Hash Table                 | O(1)     | O(1)     | O(n)     | O(n)     |
+| Binary Search Tree (avg)   | O(log n) | O(log n) | O(log n) | O(log n) |
+| Binary Search Tree (worst) | O(n)     | O(n)     | O(n)     | O(n)     |
+| AVL Tree                   | O(log n) | O(log n) | O(log n) | O(log n) |
+| Red-Black Tree             | O(log n) | O(log n) | O(log n) | O(log n) |
+| Min/Max Heap               | O(1)     | O(log n) | O(n)     | O(n)     |
+| Trie                       | O(L)     | O(L)     | O(n×L)   | O(n×L)   |
+| Graph (Adj List)           | O(1)     | -        | O(V+E)   | O(V+E)   |
+
+---
+
+### **Algorithms Time & Space Complexity Table**
+
+| Algorithm      | Best          | Worst      | Space      |
+| -------------- | ------------- | ---------- | ---------- |
+| Bubble Sort    | O(n²)         | O(n²)      | O(n)       |
+| Selection Sort | O(n²)         | O(n²)      | O(n²)      |
+| Insertion Sort | O(n²)         | O(n²)      | O(n)       |
+| Merge Sort     | O(n log n)    | O(n log n) | O(n log n) |
+| Quick Sort     | O(n log n)    | O(n²)      | O(n log n) |
+| Heap Sort      | O(n log n)    | O(n log n) | O(n)       |
+| Counting Sort  | O(n+k)        | O(n+k)     | O(k)       |
+| Radix Sort     | O(nk)         | O(nk)      | O(n+k)     |
+| Linear Search  | O(n)          | O(n)       | O(1)       |
+| Binary Search  | O(log n)      | O(log n)   | O(1)       |
+| DFS/BFS        | O(V+E)        | O(V+E)     | O(V)       |
+| Dijkstra       | O((V+E)log V) | -          | O(V)       |
+| Kruskal        | O(E log E)    | -          | O(V)       |
+| Prim           | O((V+E)log V) | -          | O(V)       |
+| KMP            | O(n+m)        | -          | O(m)       |
+| Rabin-Karp     | O(n+m)        | O(nm)      | O(1)       |
+| Floyd-Warshall | O(n³)         | -          | O(n²)      |
+| Bellman-Ford   | O(VE)         | -          | O(V)       |
+
+---
 
 ## Contribution Guidelines
 
