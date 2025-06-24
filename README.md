@@ -3,57 +3,6 @@
 **DSA** stands for **Data Structures and Algorithms**. It’s a fundamental area in computer science that focuses on how data is organized and how you can manipulate it efficiently to solve problems.
 
 ---
-
-### **1. Data Structures (DS)**
-
-Data Structures are ways to store and organize data in a computer so that it can be accessed and modified efficiently.
-
-**Common Data Structures:**
-
-* **Array**: Stores elements in contiguous memory. Fast access by index.
-* **Linked List**: Elements (nodes) connected via pointers. Good for insertions/deletions.
-* **Stack**: LIFO (Last In First Out) structure.
-* **Queue**: FIFO (First In First Out) structure.
-* **Hash Table / Map**: Key-value storage with fast lookup.
-* **Tree**: Hierarchical structure (e.g., Binary Trees, Binary Search Trees).
-* **Graph**: Set of nodes connected by edges (used in networking, pathfinding, etc.).
-
----
-
-###  **2. Algorithms (A)**
-
-Algorithms are step-by-step procedures or formulas for solving problems.
-
-**Types of Algorithms:**
-
-* **Sorting** (Bubble, Merge, Quick, etc.)
-* **Searching** (Linear, Binary)
-* **Recursion** (Function calling itself)
-* **Dynamic Programming** (Breaking problems into subproblems and caching)
-* **Greedy Algorithms** (Optimal at each step)
-* **Backtracking** (Trying all possibilities, undoing decisions)
-* **Graph Algorithms** (BFS, DFS, Dijkstra’s, etc.)
-
----
-
-###  Why Learn DSA?
-
-*  **Improves Problem-Solving**: You learn to break down problems logically.
-*  **Crucial for Coding Interviews**: Companies like Google, Amazon, Microsoft, etc., heavily focus on DSA in interviews.
-*  **Optimizes Code**: Efficient DSA use means faster, better-performing programs.
-*  **Builds Logical Thinking**: Helps you think like a software engineer.
-
----
-
-### Real-Life Applications
-
-* **Routing algorithms in Google Maps** (Graphs)
-* **Auto-complete and Search suggestions** (Tries)
-* **Memory management in OS** (Linked lists, Trees)
-* **Social networks** (Graphs, Hash Maps)
-
----
-
 # DSA Topics Index (with C++)
 
 A structured roadmap for mastering **Data Structures and Algorithms** using C++. Use this guide to strengthen your problem-solving skills and prepare for coding interviews.
@@ -88,6 +37,199 @@ A structured roadmap for mastering **Data Structures and Algorithms** using C++.
 
 
 ---
+
+### **1. Data Structures (DS)**
+Data Structures are ways to store and organize data in a computer so that it can be accessed and modified efficiently.
+
+### **Linear Data Structures**
+
+1. **Array**
+2. **Linked List**
+
+   * Singly Linked List
+   * Doubly Linked List
+   * Circular Linked List
+3. **Stack**
+4. **Queue**
+
+   * Simple Queue
+   * Circular Queue
+   * Priority Queue
+   * Deque (Double Ended Queue)
+
+### **Non-Linear Data Structures**
+
+1. **Tree**
+
+   * Binary Tree
+   * Binary Search Tree (BST)
+   * AVL Tree
+   * Red-Black Tree
+   * B-Tree
+   * B+ Tree
+   * Segment Tree
+   * Fenwick Tree (Binary Indexed Tree)
+   * Trie (Prefix Tree)
+   * N-ary Tree
+   * Suffix Tree
+
+2. **Graph**
+
+   * Directed Graph
+   * Undirected Graph
+   * Weighted Graph
+   * Unweighted Graph
+   * Adjacency Matrix / List Representation
+
+### **Hash-based Structures**
+
+1. **Hash Table**
+2. **Hash Map**
+3. **Hash Set**
+
+### **Other Advanced Structures**
+
+1. **Heap**
+
+   * Min Heap
+   * Max Heap
+   * Fibonacci Heap
+2. **Disjoint Set (Union-Find)**
+3. **Skip List**
+4. **Bloom Filter**
+5. **LRU Cache (uses HashMap + Doubly Linked List)**
+
+---
+
+###  **2. Algorithms (A)**
+Algorithms are step-by-step procedures or formulas for solving problems.
+
+###  **Sorting Algorithms**
+
+1. **Bubble Sort**
+2. **Selection Sort**
+3. **Insertion Sort**
+4. **Merge Sort**
+5. **Quick Sort**
+6. **Heap Sort**
+7. **Counting Sort**
+8. **Radix Sort**
+9. **Bucket Sort**
+10. **Shell Sort**
+11. **Tim Sort**
+
+###  **Searching Algorithms**
+
+1. **Linear Search**
+2. **Binary Search**
+3. **Jump Search**
+4. **Interpolation Search**
+5. **Exponential Search**
+
+###  **Divide and Conquer Algorithms**
+
+1. Merge Sort
+2. Quick Sort
+3. Binary Search
+4. Closest Pair of Points
+
+###  **Dynamic Programming (DP) Algorithms**
+
+1. **Fibonacci Sequence**
+2. **Longest Common Subsequence (LCS)**
+3. **Longest Increasing Subsequence (LIS)**
+4. **Knapsack Problem**
+5. **Matrix Chain Multiplication**
+6. **Edit Distance**
+7. **Subset Sum Problem**
+8. **Coin Change Problem**
+
+###  **Greedy Algorithms**
+
+1. **Activity Selection**
+2. **Huffman Coding**
+3. **Fractional Knapsack**
+4. **Prim’s Algorithm**
+5. **Kruskal’s Algorithm**
+6. **Dijkstra’s Algorithm**
+
+###  **Graph Algorithms**
+
+1. **Depth First Search (DFS)**
+2. **Breadth First Search (BFS)**
+3. **Dijkstra’s Algorithm**
+4. **Bellman-Ford Algorithm**
+5. **Floyd-Warshall Algorithm**
+6. **Prim’s Algorithm**
+7. **Kruskal’s Algorithm**
+8. **Topological Sorting**
+9. **Kosaraju’s Algorithm (SCC)**
+10. **Tarjan’s Algorithm**
+11. **A* Algorithm*\*
+
+###  **Backtracking Algorithms**
+
+1. **N-Queens Problem**
+2. **Sudoku Solver**
+3. **Rat in a Maze**
+4. **Subset Sum**
+5. **Hamiltonian Cycle**
+6. **Knight’s Tour**
+
+###  **Recursion Algorithms**
+
+* Tower of Hanoi
+* Factorial
+* Fibonacci
+* Combinations/Permutations
+
+###  **Mathematical Algorithms**
+
+1. **Greatest Common Divisor (GCD)**
+2. **Sieve of Eratosthenes**
+3. **Fast Exponentiation**
+4. **Modulo Arithmetic**
+5. **Euclidean Algorithm**
+6. **Number Theory Algorithms**
+
+###  **String Algorithms**
+
+1. **KMP Algorithm**
+2. **Rabin-Karp**
+3. **Z-Algorithm**
+4. **Trie-Based Matching**
+5. **Manacher’s Algorithm (Palindrome detection)**
+6. **Suffix Arrays**
+7. **Aho-Corasick Algorithm**
+
+###  **Bit Manipulation Algorithms**
+
+1. Count set bits
+2. Check if number is power of 2
+3. Bitwise AND, OR, XOR applications
+4. XOR based swap
+5. Subsets using bit masking
+
+---
+
+###  Why Learn DSA?
+
+*  **Improves Problem-Solving**: You learn to break down problems logically.
+*  **Crucial for Coding Interviews**: Companies like Google, Amazon, Microsoft, etc., heavily focus on DSA in interviews.
+*  **Optimizes Code**: Efficient DSA use means faster, better-performing programs.
+*  **Builds Logical Thinking**: Helps you think like a software engineer.
+
+---
+
+### Real-Life Applications
+
+* **Routing algorithms in Google Maps** (Graphs)
+* **Auto-complete and Search suggestions** (Tries)
+* **Memory management in OS** (Linked lists, Trees)
+* **Social networks** (Graphs, Hash Maps)
+
+---
+
 
 ## Contribution Guidelines
 
