@@ -3,7 +3,7 @@
 A **Stack** is a **linear data structure** that follows the **LIFO** (Last In, First Out) principle.
 This means the last element added is the first one to be removed.
 
-### 🔑 Core Operations:
+### Core Operations:
 
 * `push()` → Add item to top
 * `pop()` → Remove item from top
@@ -13,7 +13,7 @@ This means the last element added is the first one to be removed.
 
 ---
 
-## 🔹 Types of Stack (Implementation-wise)
+## Types of Stack (Implementation-wise)
 
 | Type                        | Description                                  |
 | --------------------------- | -------------------------------------------- |
@@ -23,7 +23,7 @@ This means the last element added is the first one to be removed.
 
 ---
 
-## 🔹 Real-Life Example
+## Real-Life Example
 
 > **Stack of Plates** 🍽️
 >
@@ -33,7 +33,7 @@ This means the last element added is the first one to be removed.
 
 ---
 
-## 🔹 Stack using Array (C++)
+## Stack using Array (C++)
 
 ```cpp
 #include <iostream>
@@ -92,7 +92,7 @@ int main() {
 
 ---
 
-## 🔹 Stack using Linked List
+## Stack using Linked List
 
 ```cpp
 struct Node {
@@ -137,7 +137,7 @@ public:
 
 ---
 
-## 🔹 Stack using STL
+## Stack using STL
 
 ```cpp
 #include <iostream>
@@ -160,7 +160,7 @@ int main() {
 
 ---
 
-## 🔹 Summary
+## Summary
 
 | Property      | Stack                      |
 | ------------- | -------------------------- |
@@ -178,7 +178,7 @@ int main() {
 A **Queue** is a **linear data structure** that follows the **FIFO** (First In, First Out) principle.
 The element inserted **first** is removed **first**.
 
-### 🔑 Core Operations:
+### Core Operations:
 
 * `enqueue()` → Add element at the rear (tail)
 * `dequeue()` → Remove element from the front (head)
@@ -188,9 +188,9 @@ The element inserted **first** is removed **first**.
 
 ---
 
-## 🔹 Real-Life Example
+## Real-Life Example
 
-> **Queue at Ticket Counter 🎫**
+> **Queue at Ticket Counter **
 >
 > * First person to enter the line gets the ticket first
 > * New people join at the end (rear)
@@ -198,7 +198,7 @@ The element inserted **first** is removed **first**.
 
 ---
 
-## 🔹 Types of Queue
+## Types of Queue
 
 | Type               | Description                                                      |
 | ------------------ | ---------------------------------------------------------------- |
@@ -578,7 +578,7 @@ public:
 ```
 ---
 
-## 🔹 Priority Queue using STL
+## Priority Queue using STL
 
 ```cpp
 #include <queue>
@@ -603,7 +603,7 @@ priority_queue<int, vector<int>, greater<int>> pq;
 
 ---
 
-## 🔹 Summary
+## Summary
 
 | Feature     | Queue                                  |
 | ----------- | -------------------------------------- |
