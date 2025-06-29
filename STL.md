@@ -724,3 +724,70 @@ int main() {
 - **Less Control:** Direct memory control is limited compared to low-level implementations.
 
 ---
+---
+
+###  **STL Operations Table**
+
+| Category      | STL Component    | Common Operations                                          | Description                                    |
+| ------------- | ---------------- | ---------------------------------------------------------- | ---------------------------------------------- |
+| **Container** | `vector`         | `push_back()`, `pop_back()`, `size()`, `at()`, `clear()`   | Dynamic array; fast access and push/pop at end |
+|               | `list`           | `push_front()`, `push_back()`, `pop_front()`, `remove()`   | Doubly linked list                             |
+|               | `deque`          | `push_front()`, `push_back()`, `pop_front()`, `pop_back()` | Double-ended queue                             |
+|               | `stack`          | `push()`, `pop()`, `top()`, `empty()`                      | LIFO stack (based on deque or vector)          |
+|               | `queue`          | `push()`, `pop()`, `front()`, `back()`                     | FIFO queue (based on deque)                    |
+|               | `priority_queue` | `push()`, `pop()`, `top()`                                 | Max-heap by default                            |
+|               | `set`            | `insert()`, `erase()`, `find()`, `count()`                 | Sorted unique elements (RB-tree)               |
+|               | `unordered_set`  | `insert()`, `erase()`, `find()`, `count()`                 | Hash-based, faster access                      |
+|               | `map`            | `insert()`, `erase()`, `find()`, `[]`                      | Key-value pairs with sorted keys               |
+|               | `unordered_map`  | `insert()`, `erase()`, `find()`, `[]`                      | Hash-based key-value pairs                     |
+|               | `multiset`       | `insert()`, `erase()`, `count()`                           | Allows duplicate elements                      |
+|               | `multimap`       | `insert()`, `equal_range()`, `find()`                      | Multiple values per key allowed                |
+
+---
+
+###  **Iterators**
+
+| Operation        | Description                              |
+| ---------------- | ---------------------------------------- |
+| `begin()`        | Returns iterator to first element        |
+| `end()`          | Returns iterator to past-the-end element |
+| `rbegin()`       | Reverse begin                            |
+| `rend()`         | Reverse end                              |
+| `advance(it, n)` | Moves iterator forward by `n` steps      |
+| `next(it)`       | Returns iterator advanced by one         |
+| `prev(it)`       | Returns iterator moved back by one       |
+
+---
+
+###  **Algorithms (Header: `<algorithm>`)**
+
+| Algorithm         | Purpose                                       |
+| ----------------- | --------------------------------------------- |
+| `sort()`          | Sorts range                                   |
+| `reverse()`       | Reverses elements in range                    |
+| `count()`         | Counts occurrences of an element              |
+| `find()`          | Finds first occurrence of a value             |
+| `accumulate()`    | Sums elements (needs `<numeric>`)             |
+| `binary_search()` | Checks if value exists in sorted range        |
+| `lower_bound()`   | Returns first element ≥ value in sorted range |
+| `upper_bound()`   | Returns first element > value in sorted range |
+| `for_each()`      | Applies function to each element              |
+| `copy()`          | Copies one range to another                   |
+| `remove()`        | Removes value logically (use with erase)      |
+| `unique()`        | Removes consecutive duplicates                |
+
+---
+
+###  **Function Objects (Functors)**
+
+| Functor                         | Description                                      |
+| ------------------------------- | ------------------------------------------------ |
+| `greater<>()`                   | Comparison functor for descending order          |
+| `less<>()`                      | Comparison functor for ascending order (default) |
+| `not_equal_to<>()`              | Checks inequality                                |
+| `plus<>()`, `minus<>()`         | Arithmetic operations                            |
+| `multiplies<>()`, `divides<>()` | Multiplicative operations                        |
+| Custom functor                  | Define with overloaded `operator()`              |
+
+---
+
