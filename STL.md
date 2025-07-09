@@ -23,7 +23,7 @@ Stores elements sequentially (like arrays).
 | Container  | Description           | Example Operations        |
 |----------------|---------------------------|--------------------------------|
 | `array`         | Static array (fixed size) | `at()`, `size()`, `fill()`     |
-| `vector`        | Dynamic array              | `push_back()`, `pop_back()`, `size()` |
+| [vector](#vector) | Dynamic array              | `push_back()`, `pop_back()`, `size()` |
 | `deque`         | Double-ended queue         | `push_front()`, `push_back()`, `pop_front()`, `pop_back()` |
 | `list`          | Doubly linked list         | `push_front()`, `push_back()`, `pop_front()`, `pop_back()` |
 | `forward_list`  | Singly linked list          | `push_front()`, `pop_front()`, `insert_after()` |
