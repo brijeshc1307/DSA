@@ -1023,7 +1023,7 @@ vset[1].insert(20);
 
 ---
 
-##  What is `deque` in C++?
+## Deque
 
 A **`deque`** is a dynamic array that allows fast:
 
@@ -1040,7 +1040,7 @@ It is more flexible than `vector` which only allows fast operations at the back.
 
 ---
 
-## 🔧 Syntax:
+##  Syntax:
 
 ```cpp
 #include <deque>
@@ -1172,10 +1172,6 @@ Avoid if:
 | Memory              | Non-contiguous chunks       |
 | Use case            | Sliding window, BFS, queues |
 | STL header          | `<deque>`                   |
-
----
-
-In C++, a **`map`** is an **associative container** in STL that stores key-value pairs in **sorted order** (by key) and allows **fast retrieval** based on the key.
 
 ---
 
