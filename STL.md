@@ -790,4 +790,390 @@ int main() {
 | Custom functor                  | Define with overloaded `operator()`              |
 
 ---
+## Vector
+
+A **`vector`** is a **sequence container** that uses **dynamic arrays** internally. It allows **random access**, **fast insertion/removal at the end**, and is **resizable**.
+
+###  Key Features:
+
+* Automatically resizes itself.
+* Allows direct access to elements using the `[]` operator or `.at()`.
+* Stored in **contiguous memory** (like arrays).
+* Belongs to the `<vector>` header in C++.
+
+---
+
+## Syntax:
+
+```cpp
+#include <vector>
+#include <iostream>
+
+std::vector<int> vec; // Declaring a vector of integers
+```
+
+You can initialize vectors in various ways:
+
+```cpp
+std::vector<int> v1;                       // Empty vector
+std::vector<int> v2(5);                    // Vector of size 5 with default values (0)
+std::vector<int> v3(5, 10);                // Vector of size 5 with all elements = 10
+std::vector<int> v4 = {1, 2, 3, 4};        // Initializer list
+```
+
+---
+
+## Common Member Functions of `vector`:
+
+| Function             | Description                                  |
+| -------------------- | -------------------------------------------- |
+| `push_back(val)`     | Adds element at the end                      |
+| `pop_back()`         | Removes last element                         |
+| `size()`             | Returns the number of elements               |
+| `capacity()`         | Returns current allocated space              |
+| `resize(n)`          | Resizes vector to contain `n` elements       |
+| `clear()`            | Removes all elements                         |
+| `empty()`            | Checks if vector is empty                    |
+| `insert(pos, val)`   | Inserts element at specified position        |
+| `erase(pos)`         | Removes element from position                |
+| `front()` / `back()` | Returns first/last element                   |
+| `begin()` / `end()`  | Returns iterator to first/after-last element |
+
+---
+
+## Example:
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> v;
+
+    v.push_back(10);
+    v.push_back(20);
+    v.push_back(30);
+
+    cout << "Vector contents: ";
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << " ";
+    }
+
+    cout << "\nFirst element: " << v.front();
+    cout << "\nLast element: " << v.back();
+    cout << "\nSize: " << v.size();
+
+    return 0;
+}
+```
+
+---
+
+##  Vector vs Other STL Containers:
+
+| Feature       | `vector`    | `list`           | `deque`            | `set`           |
+| ------------- | ----------- | ---------------- | ------------------ | --------------- |
+| Memory        | Contiguous  | Doubly linked    | Double-ended array | Tree-based      |
+| Random Access | ✅ Fast      | ❌ Slow           | ✅ Fast             | ❌ Not allowed   |
+| Insert/Erase  | End: ✅ Fast | Anywhere: ✅ Fast | Ends: ✅ Fast       | ❌ Only Unique   |
+| Duplicate     | ✅ Allowed   | ✅ Allowed        | ✅ Allowed          | ❌ Not Allowed   |
+| Sorting       | Manual      | Manual           | Manual             | ✅ Automatically |
+
+---
+
+## When to Use `vector`?
+
+Use `vector` when:
+
+* You need **fast random access**.
+* You frequently **add or remove elements at the end**.
+* You don’t need frequent insertions/deletions in the middle.
+
+---
+
+## 1. **Vector of Vectors** (`vector<vector<int>>`)
+
+Used for 2D arrays, matrices, adjacency lists, etc.
+
+### Syntax:
+
+```cpp
+vector<vector<int>> matrix;
+
+matrix.push_back({1, 2, 3});
+matrix.push_back({4, 5, 6});
+```
+
+### Example:
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<vector<int>> vec = {
+        {1, 2},
+        {3, 4},
+        {5, 6}
+    };
+
+    for (int i = 0; i < vec.size(); i++) {
+        for (int j = 0; j < vec[i].size(); j++) {
+            cout << vec[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+```
+
+---
+
+## 2. **Vector of Pairs** (`vector<pair<int, int>>`)
+
+Used for storing key-value like relationships, coordinate points, etc.
+
+### Syntax:
+
+```cpp
+vector<pair<int, int>> vp;
+vp.push_back({1, 10});
+vp.push_back({2, 20});
+```
+
+### Example:
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<pair<int, int>> vp;
+
+    vp.push_back({1, 100});
+    vp.push_back(make_pair(2, 200));
+
+    for (auto &p : vp) {
+        cout << "{" << p.first << ", " << p.second << "}\n";
+    }
+
+    return 0;
+}
+```
+
+---
+
+## 4. **Vector of Tuples** (`vector<tuple<int, int, string>>`)
+
+Used when more than 2 values are needed per record.
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <tuple>
+using namespace std;
+
+int main() {
+    vector<tuple<int, int, string>> students;
+
+    students.push_back({1, 90, "Alice"});
+    students.push_back({2, 85, "Bob"});
+
+    for (auto& t : students) {
+        int id, marks;
+        string name;
+        tie(id, marks, name) = t;
+        cout << id << " " << marks << " " << name << endl;
+    }
+
+    return 0;
+}
+```
+
+---
+
+##  5. **Vector of Maps / Sets / Queues** (Container inside vector)
+
+You can combine STL containers as needed.
+
+###  Example: `vector<set<int>>` — useful for unique 2D structures
+
+```cpp
+vector<set<int>> vset(3); // 3 rows of sets
+vset[0].insert(10);
+vset[1].insert(20);
+```
+
+---
+
+##  6. **Nested STL Use Summary Table**
+
+| Container Type             | Use Case                       |
+| -------------------------- | ------------------------------ |
+| `vector<vector<int>>`      | 2D arrays, matrices            |
+| `vector<pair<int, int>>`   | Coordinates, key-value pairs   |
+| `pair<vector<int>, int>`   | List with metadata             |
+| `vector<tuple<...>>`       | Records with multiple fields   |
+| `vector<set<int>>`         | Matrix with unique row values  |
+| `vector<map<string, int>>` | Structured data rows like JSON |
+
+---
+
+##  What is `deque` in C++?
+
+A **`deque`** is a dynamic array that allows fast:
+
+* `push_front()` / `pop_front()` (front operations)
+* `push_back()` / `pop_back()` (back operations)
+
+It is more flexible than `vector` which only allows fast operations at the back.
+
+###  Header:
+
+```cpp
+#include <deque>
+```
+
+---
+
+## 🔧 Syntax:
+
+```cpp
+#include <deque>
+
+std::deque<int> dq;
+```
+
+You can initialize like:
+
+```cpp
+deque<int> dq1;                  // Empty deque
+deque<int> dq2(5);               // Deque of size 5 with default value 0
+deque<int> dq3(5, 100);          // Deque of size 5 with value 100
+deque<int> dq4 = {1, 2, 3};      // Initializer list
+```
+
+---
+
+## 🔩 Common Operations:
+
+| Function             | Description                      |
+| -------------------- | -------------------------------- |
+| `push_back(val)`     | Insert at the end                |
+| `push_front(val)`    | Insert at the front              |
+| `pop_back()`         | Remove from the end              |
+| `pop_front()`        | Remove from the front            |
+| `front()` / `back()` | Access first/last element        |
+| `size()`             | Number of elements               |
+| `clear()`            | Remove all elements              |
+| `empty()`            | Check if deque is empty          |
+| `at(index)`          | Access element with bounds check |
+| `operator[]`         | Access element (no bounds check) |
+| `insert(pos, val)`   | Insert at a given position       |
+| `erase(pos)`         | Erase element at position        |
+
+---
+
+##  Example:
+
+```cpp
+#include <iostream>
+#include <deque>
+using namespace std;
+
+int main() {
+    deque<int> dq;
+
+    dq.push_back(10);
+    dq.push_front(5);
+    dq.push_back(20);
+
+    cout << "Deque contents: ";
+    for (int x : dq)
+        cout << x << " "; // Output: 5 10 20
+
+    dq.pop_front(); // removes 5
+    dq.pop_back();  // removes 20
+
+    cout << "\nAfter popping: ";
+    for (int x : dq)
+        cout << x << " "; // Output: 10
+
+    return 0;
+}
+```
+
+---
+
+##  `deque` vs Other STL Containers
+
+| Feature                  | `vector`   | `deque`                 | `list`     |
+| ------------------------ | ---------- | ----------------------- | ---------- |
+| Random access            | ✅ Fast     | ✅ Fast                  | ❌ Slow     |
+| push\_back / pop\_back   | ✅ Fast     | ✅ Fast                  | ✅ Fast     |
+| push\_front / pop\_front | ❌ Slow     | ✅ Fast                  | ✅ Fast     |
+| Insert in middle         | ❌ Slow     | ❌ Slow                  | ✅ Fast     |
+| Memory layout            | Contiguous | Chunks (non-contiguous) | Node-based |
+
+---
+
+##  Deque with STL Containers
+
+### 1. `deque<pair<int, int>>` — Useful in graph problems:
+
+```cpp
+deque<pair<int, int>> dq;
+dq.push_back({1, 100});
+dq.push_front({2, 200});
+```
+
+### 2. `deque<vector<int>>` — For multi-level data:
+
+```cpp
+deque<vector<int>> dq;
+dq.push_back({1, 2, 3});
+dq.push_front({4, 5});
+```
+
+### 3. `deque<set<int>>` — Unique sets with front/back access:
+
+```cpp
+deque<set<int>> dq(2);  // 2 sets
+dq[0].insert(1);
+dq[1].insert(2);
+```
+
+---
+
+##  When to Use `deque`?
+
+Use `deque` when:
+
+* You need **fast insertion/removal from both ends**.
+* You also want **random access** like `vector`.
+* You don't need contiguous memory like `vector`.
+
+Avoid if:
+
+* You need frequent insert/delete in the middle → use `list`.
+
+---
+
+##  Summary:
+
+| Feature             | `deque`                     |
+| ------------------- | --------------------------- |
+| Double-ended access | ✅ Front & back (fast)       |
+| Random access       | ✅ Fast                      |
+| Memory              | Non-contiguous chunks       |
+| Use case            | Sliding window, BFS, queues |
+| STL header          | `<deque>`                   |
+
+---
+
+
 
