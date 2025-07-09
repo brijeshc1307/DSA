@@ -1175,5 +1175,171 @@ Avoid if:
 
 ---
 
+In C++, a **`map`** is an **associative container** in STL that stores key-value pairs in **sorted order** (by key) and allows **fast retrieval** based on the key.
+
+---
+
+## Map 
+A `map` stores elements as **pairs**:
+
+```cpp
+key -> value
+```
+
+* Each key is **unique**.
+* Internally implemented using a **balanced BST** (typically a Red-Black Tree).
+* Automatically **sorted by key** in ascending order.
+>a **`map`** is an **associative container** in STL that stores key-value pairs in **sorted order** (by key) and allows **fast retrieval** based on the key.
+
+### Header:
+
+```cpp
+#include <map>
+```
+
+---
+
+## Syntax:
+
+```cpp
+std::map<KeyType, ValueType> map_name;
+```
+
+### Example:
+
+```cpp
+map<int, string> m;
+m[1] = "One";
+m[2] = "Two";
+```
+
+---
+
+## Common Member Functions:
+
+| Function            | Description                              |
+| ------------------- | ---------------------------------------- |
+| `insert({k, v})`    | Inserts key-value pair                   |
+| `m[key] = value`    | Inserts/updates key                      |
+| `m.at(key)`         | Access value at key with bounds checking |
+| `m.find(key)`       | Returns iterator to key if found         |
+| `m.erase(key)`      | Removes element by key                   |
+| `m.size()`          | Number of elements                       |
+| `m.clear()`         | Removes all elements                     |
+| `m.empty()`         | Returns true if map is empty             |
+| `m.begin()/m.end()` | Iterators to start/end                   |
+
+---
+
+## Example:
+
+```cpp
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    map<int, string> m;
+
+    m[101] = "Alice";
+    m[102] = "Bob";
+    m[100] = "Charlie";
+
+    for (auto &entry : m) {
+        cout << entry.first << ": " << entry.second << endl;
+    }
+
+    return 0;
+}
+```
+
+### Output:
+
+```
+100: Charlie
+101: Alice
+102: Bob
+```
+
+ Notice the keys are automatically sorted.
+
+---
+
+## `map` vs `unordered_map`
+
+| Feature            | `map`              | `unordered_map`          |
+| ------------------ | ------------------ | ------------------------ |
+| Internal Structure | Red-Black Tree     | Hash Table               |
+| Order              | Sorted by key      | No specific order        |
+| Time Complexity    | O(log n)           | O(1) average, O(n) worst |
+| Key Type           | Must be comparable | Must be hashable         |
+
+---
+
+## `map` with STL Containers
+
+### 1. `map<string, vector<int>>` – useful in grouping:
+
+```cpp
+map<string, vector<int>> studentMarks;
+studentMarks["Alice"].push_back(90);
+studentMarks["Bob"].push_back(80);
+```
+
+### 2. `map<int, pair<string, float>>` – mapping IDs to info:
+
+```cpp
+map<int, pair<string, float>> students;
+students[1] = {"Alice", 90.5};
+```
+
+### 3. `map<int, set<int>>` – graph adjacency list:
+
+```cpp
+map<int, set<int>> graph;
+graph[0].insert(1);
+graph[0].insert(2);
+```
+
+---
+
+## 🔍 Find and Erase Example:
+
+```cpp
+map<int, string> m;
+m[1] = "A";
+m[2] = "B";
+
+if (m.find(2) != m.end()) {
+    cout << "Found: " << m[2];
+    m.erase(2);
+}
+```
+
+---
+
+## 🧠 Summary:
+
+| Property           | Value                       |
+| ------------------ | --------------------------- |
+| Key uniqueness     | ✅ Keys must be unique       |
+| Ordering           | ✅ Sorted by key (ascending) |
+| Duplicate keys     | ❌ Not allowed               |
+| Access time        | O(log n)                    |
+| Internal structure | Red-Black Tree              |
+| Header             | `<map>`                     |
+
+---
+
+## 🚀 Real Use Cases:
+
+* Counting frequency: `map<char, int> freq`
+* Index mapping: `map<int, int>`
+* Adjacency list for graphs
+* Caching or dictionary-based lookups
+
+---
+
+
 
 
