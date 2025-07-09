@@ -24,8 +24,8 @@ Stores elements sequentially (like arrays).
 |----------------|---------------------------|--------------------------------|
 | `array`         | Static array (fixed size) | `at()`, `size()`, `fill()`     |
 | [vector](#vector) | Dynamic array              | `push_back()`, `pop_back()`, `size()` |
-| `deque`         | Double-ended queue         | `push_front()`, `push_back()`, `pop_front()`, `pop_back()` |
-| `list`          | Doubly linked list         | `push_front()`, `push_back()`, `pop_front()`, `pop_back()` |
+| [deque](#deque)     | Double-ended queue         | `push_front()`, `push_back()`, `pop_front()`, `pop_back()` |
+| [list](#list)       | Doubly linked list         | `push_front()`, `push_back()`, `pop_front()`, `pop_back()` |
 | `forward_list`  | Singly linked list          | `push_front()`, `pop_front()`, `insert_after()` |
 
 ---
@@ -34,10 +34,10 @@ Stores elements sequentially (like arrays).
 Stores elements in a sorted/unordered fashion using keys.  
 | Container     | Description              | Example Operations      |
 |---------------|--------------------------|-------------------------|
-| `set`         | Unique sorted elements    | `insert()`, `erase()`    |
-| `map`         | Key-value pairs (sorted)  | `insert()`, `find()`     |
-| `multiset`    | Allows duplicate elements | `count()`, `equal_range()` |
-| `multimap`    | Multiple key-value pairs  | `insert()`, `find()`     |
+| [set](#set)         | Unique sorted elements    | `insert()`, `erase()`    |
+| [map](#map)         | Key-value pairs (sorted)  | `insert()`, `find()`     |
+| [multiset](#multiset)    | Allows duplicate elements | `count()`, `equal_range()` |
+| [multimap](#multimap)    | Multiple key-value pairs  | `insert()`, `find()`     |
 
 ---
 
@@ -45,10 +45,10 @@ Stores elements in a sorted/unordered fashion using keys.
 Stores elements with no specific order, offering faster access compared to ordered containers.  
 | Container             | Description                 |
 |----------------------------|----------------------------------|
-| `unordered_set`            | Unique elements, no specific order |
-| `unordered_map`            | Key-value pairs, no specific order |
-| `unordered_multiset`       | Allows duplicate elements, no specific order |
-| `unordered_multimap`       | Allows duplicate key-value pairs, no specific order |
+| [unordered_set](#unordered_set)            | Unique elements, no specific order |
+| [unordered_map](#unordered_map)            | Key-value pairs, no specific order |
+| [unordered_multiset](#unordered_multiset)  | Allows duplicate elements, no specific order |
+| [unordered_multimap](#unordered_multimap)  | Allows duplicate key-value pairs, no specific order |
 
 ---
 
@@ -56,9 +56,9 @@ Stores elements with no specific order, offering faster access compared to order
 Stores elements with no specific order, offering faster access compared to ordered containers.  
 | **Container**          | **Description**                            |
 |------------------------|--------------------------------------------|
-| `queue`                | FIFO (First-In-First-Out) container, elements are processed in the order they are added |
-| `priority_queue`       | Elements are ordered based on priority (default: max-heap) |
-| `stack`                | LIFO (Last-In-First-Out) container, elements are processed in reverse order of addition |
+| [queue](#queue)                | FIFO (First-In-First-Out) container, elements are processed in the order they are added |
+| [priority_queue](#priority_queue)       | Elements are ordered based on priority (default: max-heap) |
+| [stack](#stack)                | LIFO (Last-In-First-Out) container, elements are processed in reverse order of addition |
 
 ---
 
