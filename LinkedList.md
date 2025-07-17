@@ -9,6 +9,12 @@ Each node contains:
 * **Data**: The value stored.
 * **Pointer**: A reference to the next node.
 
+Note:
+* head: Points to the first node in the linked list.
+* head->next: Points to the second node.
+* head->next->next: Points to the third node.
+
+
 
 ```
 10 -> 20 -> 30 -> NULL
