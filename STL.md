@@ -13,7 +13,7 @@ STL consists of four main components:
    
 ---
 
-### **1. STL Containers** 
+### **1. Containers** 
 - Used to store and manage collections of data.
 
 STL containers are categorized into 4 types:
@@ -745,7 +745,7 @@ int main() {
 
 ---
 
-###  **Iterators**
+###  **2. Iterators**
 
 | Operation        | Description                              |
 | ---------------- | ---------------------------------------- |
@@ -759,7 +759,7 @@ int main() {
 
 ---
 
-###  **Algorithms (Header: `<algorithm>`)**
+###  **3. Algorithms (Header: `<algorithm>`)**
 
 | Algorithm         | Purpose                                       |
 | ----------------- | --------------------------------------------- |
@@ -778,7 +778,7 @@ int main() {
 
 ---
 
-###  **Function Objects (Functors)**
+###  **4. Function Objects (Functors)**
 
 | Functor                         | Description                                      |
 | ------------------------------- | ------------------------------------------------ |
@@ -788,6 +788,32 @@ int main() {
 | `plus<>()`, `minus<>()`         | Arithmetic operations                            |
 | `multiplies<>()`, `divides<>()` | Multiplicative operations                        |
 | Custom functor                  | Define with overloaded `operator()`              |
+
+---
+###  **5. Utility**
+
+| **Utility**  | **Description**                                         |
+| ------------ | ------------------------------------------------------- |
+| `pair`       | Stores two heterogeneous objects as a single unit       |
+| `make_pair`  | Creates a `pair` object conveniently                    |
+| `tuple`      | Fixed-size collection of heterogeneous values           |
+| `make_tuple` | Creates a `tuple` object                                |
+| `tie`        | Unpacks tuple into individual variables                 |
+| `ignore`     | Placeholder to ignore elements when unpacking a tuple   |
+| `function`   | General-purpose polymorphic function wrapper            |
+| `bind`       | Binds arguments to functions, creating callable objects |
+| `ref`        | Wraps a reference to be passed to functions             |
+| `cref`       | Wraps a const reference                                 |
+
+---
+
+###  **6. Allocators** 
+
+| **Allocator**                     | **Description**                                                            |
+| --------------------------------- | -------------------------------------------------------------------------- |
+| `std::allocator`                  | Default allocator that handles memory allocation and deallocation.         |
+| `std::pmr::polymorphic_allocator` | Allocator that supports polymorphic memory resource allocation (C++17).    |
+| Custom Allocator                  | User-defined allocator for customized memory management and optimizations. |
 
 ---
 ## Vector
