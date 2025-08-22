@@ -896,6 +896,99 @@ int main() {
 
 ---
 
+## Ways to Fix/Set the Size of a `std::vector`
+
+### 1. **Use the constructor to set initial size**
+
+```cpp
+#include <vector>
+std::vector<int> vec(10);  // size is fixed to 10, initialized with 0
+```
+
+* This creates a vector of size 10.
+* All elements are default-initialized (0 for `int`).
+
+You can access `vec[0]` to `vec[9]`.
+
+---
+
+### 2. **Resize an existing vector**
+
+```cpp
+std::vector<int> vec;
+vec.resize(10);  // now size is 10
+```
+
+* Also sets the size.
+* New elements (if any) are default-initialized.
+
+---
+
+### 3. **Fix Size and Prevent Resizing (Conceptually)**
+
+`std::vector` is **dynamic**, so its size isn't truly "fixed" — but you can **simulate a fixed size**:
+
+#### Option A: Don't allow push\_back / resize after creation
+
+Just avoid using operations that change size after initial allocation:
+
+```cpp
+std::vector<int> vec(10);  // fixed size
+// Don't call vec.push_back(), vec.resize(), etc.
+```
+
+#### Option B: Use `std::array` for compile-time fixed size
+
+If you truly need a **fixed-size container**, use:
+
+```cpp
+#include <array>
+
+std::array<int, 10> arr;  // exactly 10 elements, cannot resize
+```
+
+* Size is fixed at compile time.
+* No dynamic allocation.
+* Faster and more memory-efficient than vector in many cases.
+
+---
+
+## Bonus: Fix Capacity but Not Size
+
+You can fix the **capacity** (preallocate memory) using:
+
+```cpp
+std::vector<int> vec;
+vec.reserve(10);  // capacity is 10, size is still 0
+```
+
+But this does **not change the size** — you still need to `push_back()` or `resize()`.
+
+---
+
+## Summary
+
+| Goal                        | Recommended Approach                     |
+| --------------------------- | ---------------------------------------- |
+| Set size to N               | `std::vector<T> v(N);` or `v.resize(N);` |
+| Prevent resizing (manually) | Avoid `push_back()`, `resize()`, etc.    |
+| Truly fixed size            | Use `std::array<T, N>`                   |
+| Preallocate memory only     | Use `v.reserve(N);`                      |
+
+
+---
+
+
+## Difference Between `size()` and `capacity()`
+
+| Term         | Meaning                                                                                |
+| ------------ | -------------------------------------------------------------------------------------- |
+| `size()`     | The **number of elements** currently in the vector                                     |
+| `capacity()` | The **number of elements the vector can hold** before it needs to allocate more memory |
+
+
+---
+
 ##  Vector vs Other STL Containers:
 
 | Feature       | `vector`    | `list`           | `deque`            | `set`           |
