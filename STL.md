@@ -1011,6 +1011,89 @@ Use `vector` when:
 
 ---
 
+##  1. `const vector` (Protects the vector itself)
+
+```cpp
+const std::vector<int> nums = {1, 2, 3, 4};
+
+// nums.push_back(5); // ❌ Error: can't modify a const vector
+std::cout << nums[0] << std::endl; // ✅ OK: reading is allowed
+```
+
+🔒 **You cannot modify the vector** — no `push_back`, `clear`, etc.
+✅ **You can read its elements**.
+
+---
+
+##  2. Vector of `const` elements (Protects the elements)
+
+```cpp
+std::vector<const int> nums = {1, 2, 3}; // ✅ Valid
+
+// nums[0] = 10; // ❌ Error: cannot modify elements
+```
+
+🔒 Each **element** is `const` — so you can’t change values inside the vector.
+✅ You **can modify the vector itself** — e.g., `push_back()` works (but you must push `const int`).
+
+---
+
+##  3. Const Reference to a Vector (Common for function parameters)
+
+```cpp
+void printVector(const std::vector<int>& vec) {
+    for (int num : vec) {
+        std::cout << num << " ";
+    }
+}
+```
+
+* Efficient (no copying)
+* Prevents modification
+* ✅ Very common pattern
+
+---
+
+##  4. Vector of Pointers to Const (Common in object lists)
+
+```cpp
+class Shape {
+public:
+    virtual void draw() const = 0;
+};
+
+std::vector<const Shape*> shapes;
+
+// shapes.push_back(new Circle()); // ✅ OK
+// shapes[0]->draw(); // ✅ OK
+```
+
+* You can’t modify the object via the pointer (`const Shape*`).
+* Used in **polymorphism** for read-only access.
+
+---
+
+##  Things That Won’t Work
+
+```cpp
+const std::vector<int> v = {1, 2, 3};
+v[0] = 10;          // ❌ Error: cannot modify
+v.push_back(4);     // ❌ Error: cannot modify
+```
+
+---
+
+
+| Use Case                         | Syntax                              | What is `const`?             |
+| -------------------------------- | ----------------------------------- | ---------------------------- |
+| Const vector                     | `const std::vector<int> v;`         | Vector is read-only          |
+| Vector of const elements         | `std::vector<const int> v;`         | Elements are read-only       |
+| Const reference to vector        | `const std::vector<int>& v`         | Function gets read-only view |
+| Vector of pointers to const objs | `std::vector<const Shape*> shapes;` | Access but no modify via ptr |
+
+---
+
+
 ## 1. **Vector of Vectors** (`vector<vector<int>>`)
 
 Used for 2D arrays, matrices, adjacency lists, etc.
