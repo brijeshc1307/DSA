@@ -1550,6 +1550,297 @@ if (m.find(2) != m.end()) {
 
 ---
 
+##  What is `std::list`?
+
+`std::list` is a **doubly linked list** in the Standard Template Library (STL).
+
+* Each element (node) stores:
+
+  * **Data**
+  * **Pointer to the next node**
+  * **Pointer to the previous node**
+
+Because of this structure:
+
+* **Insertion and deletion** at any position (beginning, middle, or end) are **fast (O(1))**.
+* But **random access** (like accessing `list[3]`) is **slow (O(n))**.
+
+---
+
+##  Syntax
+
+```cpp
+#include <list>
+using namespace std;
+
+list<int> l;           // Empty list of integers
+list<string> names;    // Empty list of strings
+list<int> l2 = {1, 2, 3, 4};  // Initialize list with values
+```
+
+---
+
+##  Common Functions
+
+| Function        | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| `push_back(x)`  | Insert element at the end                             |
+| `push_front(x)` | Insert element at the beginning                       |
+| `pop_back()`    | Remove last element                                   |
+| `pop_front()`   | Remove first element                                  |
+| `insert(it, x)` | Insert `x` before iterator `it`                       |
+| `erase(it)`     | Remove element at iterator `it`                       |
+| `remove(x)`     | Remove all occurrences of `x`                         |
+| `clear()`       | Remove all elements                                   |
+| `size()`        | Returns number of elements                            |
+| `empty()`       | Checks if list is empty                               |
+| `front()`       | Returns first element                                 |
+| `back()`        | Returns last element                                  |
+| `reverse()`     | Reverses the list                                     |
+| `sort()`        | Sorts the list in ascending order                     |
+| `unique()`      | Removes consecutive duplicate elements                |
+| `merge(l2)`     | Merges another sorted list `l2` into the current list |
+
+---
+
+## Example Program
+
+```cpp
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main() {
+    list<int> l = {10, 20, 30};
+
+    l.push_front(5);
+    l.push_back(40);
+
+    cout << "List elements: ";
+    for (int x : l)
+        cout << x << " ";
+
+    cout << "\nFirst element: " << l.front();
+    cout << "\nLast element: " << l.back();
+
+    l.pop_front();
+    l.pop_back();
+
+    cout << "\nAfter popping front and back: ";
+    for (int x : l)
+        cout << x << " ";
+
+    l.reverse();
+    cout << "\nAfter reverse: ";
+    for (int x : l)
+        cout << x << " ";
+
+    l.sort();
+    cout << "\nAfter sort: ";
+    for (int x : l)
+        cout << x << " ";
+}
+```
+
+###  Output:
+
+```
+List elements: 5 10 20 30 40 
+First element: 5
+Last element: 40
+After popping front and back: 10 20 30 
+After reverse: 30 20 10 
+After sort: 10 20 30
+```
+
+---
+
+##  Advantages
+
+* Fast insertion/deletion anywhere (`O(1)` with iterator).
+* No reallocation (unlike `vector`).
+
+##  Disadvantages
+
+* No random access.
+* Extra memory overhead (due to node pointers).
+* Traversing is slower compared to `vector`.
+
+---
+
+## When to Use `std::list`
+
+Use `list` when:
+
+* You frequently **insert or delete** elements in the **middle**.
+* You **don’t need random access**.
+
+---
+
+# `std::stack` — Last In First Out (LIFO)
+
+A **stack** stores elements such that the **last inserted element is the first one to be removed**.
+
+###  Syntax:
+
+```cpp
+#include <stack>
+using namespace std;
+
+stack<int> s;         // Empty stack of integers
+stack<string> names;  // Stack of strings
+```
+
+---
+
+###  Common Functions
+
+| Function  | Description                    |
+| --------- | ------------------------------ |
+| `push(x)` | Adds element `x` to the top    |
+| `pop()`   | Removes top element            |
+| `top()`   | Access the top element         |
+| `empty()` | Checks if stack is empty       |
+| `size()`  | Returns the number of elements |
+
+---
+
+###  Example:
+
+```cpp
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<int> s;
+
+    s.push(10);
+    s.push(20);
+    s.push(30);
+
+    cout << "Top element: " << s.top() << endl; // 30
+
+    s.pop();  // removes 30
+
+    cout << "After pop, top: " << s.top() << endl; // 20
+    cout << "Size: " << s.size() << endl;
+
+    while (!s.empty()) {
+        cout << s.top() << " ";
+        s.pop();
+    }
+}
+```
+
+ **Output:**
+
+```
+Top element: 30
+After pop, top: 20
+Size: 2
+20 10 
+```
+
+---
+
+### Characteristics
+
+* **Follows LIFO (Last In, First Out)**
+* No iteration (can’t traverse elements)
+* Used for **expression evaluation**, **backtracking**, **undo operations**, etc.
+
+---
+
+#  `std::queue` — First In First Out (FIFO)
+
+A **queue** stores elements such that the **first inserted element is the first to be removed**.
+
+###  Syntax:
+
+```cpp
+#include <queue>
+using namespace std;
+
+queue<int> q;          // Empty queue of integers
+queue<string> names;   // Queue of strings
+```
+
+---
+
+###  Common Functions
+
+| Function  | Description                   |
+| --------- | ----------------------------- |
+| `push(x)` | Add element to the back       |
+| `pop()`   | Remove element from the front |
+| `front()` | Access the first element      |
+| `back()`  | Access the last element       |
+| `empty()` | Check if queue is empty       |
+| `size()`  | Returns number of elements    |
+
+---
+
+###  Example:
+
+```cpp
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main() {
+    queue<int> q;
+
+    q.push(10);
+    q.push(20);
+    q.push(30);
+
+    cout << "Front: " << q.front() << endl; // 10
+    cout << "Back: " << q.back() << endl;   // 30
+
+    q.pop(); // Removes 10
+
+    cout << "After pop, front: " << q.front() << endl; // 20
+    cout << "Size: " << q.size() << endl;
+
+    while (!q.empty()) {
+        cout << q.front() << " ";
+        q.pop();
+    }
+}
+```
+
+ **Output:**
+
+```
+Front: 10
+Back: 30
+After pop, front: 20
+Size: 2
+20 30 
+```
+
+---
+
+###  Characteristics
+
+* **Follows FIFO (First In, First Out)**
+* No iteration (no direct traversal)
+* Useful in **scheduling**, **message queues**, **BFS traversal**, etc.
+
+---
+
+#  Summary Table
+
+| Feature        | `stack`                                | `queue`                    |
+| -------------- | -------------------------------------- | -------------------------- |
+| Order          | LIFO                                   | FIFO                       |
+| Insert element | `push()` (top)                         | `push()` (back)            |
+| Remove element | `pop()` (top)                          | `pop()` (front)            |
+| Access element | `top()`                                | `front()` & `back()`       |
+| Use cases      | Undo, recursion, expression evaluation | BFS, scheduling, buffering |
+
+---
 
 
 
