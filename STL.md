@@ -1010,7 +1010,19 @@ Use `vector` when:
 * You don’t need frequent insertions/deletions in the middle.
 
 ---
+###  Pros of `std::vector` :
 
+* Automatically resizes and provides dynamic array functionality.
+* Fast random access due to contiguous memory storage.
+* Works well with STL algorithms and is easy to use.
+
+###  Cons of `std::vector` :
+
+* Inserting/removing elements (especially in the middle) is slow.
+* Reallocations can be costly and may invalidate pointers/iterators.
+* Not efficient for frequent insertions/removals at the front.
+
+---
 ##  1. `const vector` (Protects the vector itself)
 
 ```cpp
